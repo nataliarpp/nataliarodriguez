@@ -1,0 +1,81 @@
+# Guía: de cero a tu portfolio publicado en internet
+
+Antes de empezar, tres palabras que vas a ver mucho:
+
+| Palabra | Qué es, en cristiano |
+|---|---|
+| **Código / archivos** | Tu web son 3 archivos de texto: `index.html` (el contenido), `styles.css` (el diseño: colores, tamaños) y `script.js` (las animaciones). |
+| **GitHub** | Un "Google Drive para código". Guarda tus archivos y cada versión que hagas. |
+| **Repositorio (repo)** | Una "carpeta" de GitHub donde vive un proyecto. Tu portfolio tendrá su propio repo. |
+| **Vercel** | Un servicio gratuito que coge los archivos de tu repo de GitHub y los convierte en una web pública con un enlace (`tunombre.vercel.app`). |
+
+El recorrido es: **archivos → GitHub → Vercel → enlace para compartir.**
+Y lo mejor: cada vez que cambies algo en GitHub, Vercel actualiza la web solo, en un minuto.
+
+---
+
+## Paso 1 · Crear tu cuenta de GitHub (si no la tienes)
+
+1. Entra en <https://github.com/signup>.
+2. Pon tu email, una contraseña y un nombre de usuario.
+   El usuario sale en tus enlaces, así que elige algo profesional (por ejemplo `nataliarodriguez`).
+3. Confirma el email que te envían.
+
+## Paso 2 · Crear el repositorio vacío
+
+1. Con la sesión iniciada en GitHub, arriba a la derecha pulsa el **+** → **New repository**.
+2. **Repository name**: `portfolio`.
+3. Déjalo en **Public**.
+4. **No marques** "Add a README", ni .gitignore, ni license. Tiene que estar **vacío**.
+5. Pulsa **Create repository**.
+6. Copia la dirección de la página (algo como `https://github.com/TU-USUARIO/portfolio`).
+
+## Paso 3 · Subir los archivos
+
+**Opción A (la más fácil):** pásame el enlace del paso 2 y yo subo los archivos por ti.
+
+**Opción B (a mano, sin programas):**
+1. Descarga los archivos `index.html`, `styles.css`, `script.js` y la carpeta `images`.
+2. En la página de tu repo vacío, pulsa el enlace **uploading an existing file**.
+3. Arrastra los archivos a la ventana.
+4. Abajo, pulsa **Commit changes** (en GitHub, "commit" significa "guardar una versión").
+
+## Paso 4 · Publicar con Vercel
+
+1. Entra en <https://vercel.com/signup>.
+2. Elige **Hobby** (es gratis) y pulsa **Continue with GitHub**. Así Vercel puede ver tus repos.
+3. Cuando te pregunte, dale permiso para acceder a tu repo `portfolio`.
+4. En el panel de Vercel: **Add New… → Project**.
+5. Busca `portfolio` en la lista y pulsa **Import**.
+6. No cambies nada de la configuración (es una web sencilla y Vercel la entiende sola).
+   Pulsa **Deploy**.
+7. En unos segundos verás confeti y tu enlace: `portfolio-xxxx.vercel.app`. ¡Ya está en internet!
+
+### Cambiar el nombre del enlace
+En Vercel: tu proyecto → **Settings → Domains**. Ahí puedes cambiarlo por algo como
+`nataliarodriguez.vercel.app` (si está libre), o conectar un dominio propio
+(`nataliarodriguez.com`) si lo compras.
+
+---
+
+## Cómo editar tu web después
+
+Desde la propia web de GitHub, sin instalar nada:
+
+1. Entra en tu repo y haz clic en el archivo (por ejemplo `index.html`).
+2. Pulsa el **lápiz** ✏️ (arriba a la derecha del archivo).
+3. Cambia el texto. Busca los comentarios `CAMBIA ESTO` (las líneas entre `<!--` y `-->`
+   son notas para ti y no se ven en la web).
+4. Pulsa **Commit changes**.
+5. Espera un minuto y recarga tu web en Vercel: ya sale el cambio.
+
+### Añadir imágenes
+1. En tu repo, entra en la carpeta `images` → **Add file → Upload files** → arrastra tus fotos.
+   Usa nombres sin espacios ni tildes: `proyecto-1.jpg`, `foto.jpg`.
+2. En `index.html`, sigue las instrucciones de los comentarios para que salga la imagen.
+3. Consejo: comprime las imágenes antes de subirlas (por ejemplo con <https://squoosh.app>)
+   para que la web cargue rápido. Intenta que cada una pese menos de 500 KB.
+
+### Cambiar colores o tipografías
+En `styles.css`, arriba del todo, hay un bloque `:root` con los colores. Cambia el código
+del color (por ejemplo `#F7F5F1`) y se actualiza toda la web.

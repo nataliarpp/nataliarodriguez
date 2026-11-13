@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CAMBIA ESTO: el título que sale en la pestaña del navegador y en Google -->
+  <title>Natalia Rodríguez — Portfolio</title>
+  <meta name="description" content="Portfolio de Natalia Rodríguez.">
+
+  <!-- Tipografías de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== MENÚ DE ARRIBA ===== -->
+  <header class="nav">
+    <a href="#" class="nav__logo">Natalia Rodríguez</a>
+    <nav class="nav__links">
+      <a href="#trabajo">Trabajo</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== PORTADA (lo primero que se ve) ===== -->
+    <section class="hero">
+      <p class="badge reveal"><span class="badge__dot"></span>Disponible para nuevos proyectos</p>
+      <!-- CAMBIA ESTO: tu frase principal -->
+      <h1 class="hero__title reveal">
+        Diseño productos digitales <em>claros, útiles</em> y bonitos.
+      </h1>
+      <!-- CAMBIA ESTO: una o dos frases sobre ti -->
+      <p class="hero__intro reveal">
+        Soy Natalia, diseñadora de producto y UX/UI. Me gusta convertir problemas
+        complejos en experiencias sencillas.
+      </p>
+    </section>
+
+    <!-- ===== PROYECTOS ===== -->
+    <section id="trabajo" class="section">
+      <div class="section__head">
+        <h2 class="section__title">Trabajo seleccionado</h2>
+        <span class="section__count">2023 — 2026</span>
+      </div>
+
+      <div class="grid">
+        <!--
+          Cada <a class="card"> es un proyecto. Para añadir uno, copia un bloque entero
+          desde <a class="card"...> hasta </a> y pégalo debajo.
+
+          Para poner una imagen: guarda la foto en la carpeta "images" y cambia
+            <div class="card__cover" style="--c:#E9E4DA"></div>
+          por
+            <div class="card__cover"><img src="images/nombre-de-tu-foto.jpg" alt="Descripción"></div>
+        -->
+
+        <a class="card reveal" href="#">
+          <div class="card__cover" style="--c:#E9E4DA"><span>Imagen del proyecto 1</span></div>
+          <div class="card__info">
+            <h3>Nombre del proyecto 1</h3>
+            <p>App móvil · UX/UI · 2026</p>
+          </div>
+        </a>
+
+        <a class="card reveal" href="#">
+          <div class="card__cover" style="--c:#DCE3E8"><span>Imagen del proyecto 2</span></div>
+          <div class="card__info">
+            <h3>Nombre del proyecto 2</h3>
+            <p>Web · Branding · 2025</p>
+          </div>
+        </a>
+
+        <a class="card reveal" href="#">
+          <div class="card__cover" style="--c:#E6DDE4"><span>Imagen del proyecto 3</span></div>
+          <div class="card__info">
+            <h3>Nombre del proyecto 3</h3>
+            <p>Dashboard · Research · 2024</p>
+          </div>
+        </a>
+
+        <a class="card reveal" href="#">
+          <div class="card__cover" style="--c:#DFE5DA"><span>Imagen del proyecto 4</span></div>
+          <div class="card__info">
+            <h3>Nombre del proyecto 4</h3>
+            <p>Sistema de diseño · 2023</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section id="sobre-mi" class="section about">
+      <!-- Para poner tu foto: guárdala como images/foto.jpg y cambia el div de abajo por
+           <img class="about__photo" src="images/foto.jpg" alt="Foto de Natalia"> -->
+      <div class="about__photo about__photo--empty reveal">Tu foto</div>
+
+      <div class="about__text reveal">
+        <h2 class="section__title">Sobre mí</h2>
+        <!-- CAMBIA ESTO: tu biografía -->
+        <p>
+          Escribe aquí tu biografía: quién eres, qué te apasiona del diseño, cómo trabajas
+          y qué tipo de proyectos te gustan.
+        </p>
+
+        <h3 class="about__sub">Experiencia</h3>
+        <ul class="list">
+          <li><span>Puesto · Empresa</span><span>2024 — Hoy</span></li>
+          <li><span>Puesto · Empresa</span><span>2022 — 2024</span></li>
+          <li><span>Formación · Escuela</span><span>2018 — 2022</span></li>
+        </ul>
+
+        <h3 class="about__sub">Herramientas</h3>
+        <p class="tags">
+          <span>Figma</span><span>Framer</span><span>Prototipado</span>
+          <span>User research</span><span>Design systems</span>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== CONTACTO / PIE ===== -->
+  <footer id="contacto" class="footer">
+    <p class="footer__kicker">¿Hablamos?</p>
+    <!-- CAMBIA ESTO: tu email (cámbialo en los dos sitios: después de mailto: y el texto) -->
+    <a class="footer__mail" href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a>
+    <div class="footer__bottom">
+      <!-- CAMBIA ESTO: tus enlaces (pon tu URL entre las comillas de href) -->
+      <nav class="footer__social">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.behance.net/" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+      <p>© 2026 Natalia Rodríguez</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
