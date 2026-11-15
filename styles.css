@@ -214,19 +214,56 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 }
 
 /* Experiencia */
-.xp { list-style: none; margin-top: 72px; max-width: 880px; }
-.xp li {
+.section__lead { margin-top: 24px; max-width: 58ch; color: var(--texto-2); font-size: 18px; }
+.jobs { list-style: none; margin-top: 72px; max-width: 960px; }
+.job {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid var(--linea);
+}
+.job:last-child { border-bottom: 1px solid var(--linea); }
+.job__date { color: var(--gris); }
+.job__company { font-size: 20px; font-weight: 500; line-height: 1.4; }
+.job__note { color: var(--gris); font-weight: 400; }
+.job__role { color: var(--gris); }
+.job__desc { margin-top: 12px; color: var(--texto-2); max-width: 62ch; }
+.job__highlights {
+  list-style: none;
+  margin-top: 18px;
+  padding: 16px 20px;
+  display: grid;
+  gap: 8px;
+  background: color-mix(in srgb, var(--acento) 7%, transparent);
+  border-left: 2px solid var(--acento);
+}
+.job__highlights li { position: relative; padding-left: 18px; color: var(--texto); }
+.job__highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .65em;
+  width: 6px;
+  height: 6px;
+  background: var(--acento);
+}
+.job__highlights strong { font-weight: 600; color: var(--acento); }
+
+.sub-label { margin-top: 96px; color: var(--gris); font-size: 17px; font-weight: 400; }
+.edu { list-style: none; margin-top: 24px; max-width: 960px; }
+.edu li {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 24px;
   padding: 18px 0;
   border-top: 1px solid var(--linea);
 }
-.xp li:last-child { border-bottom: 1px solid var(--linea); }
-.xp__year { color: var(--gris); }
-.xp__what { display: flex; flex-direction: column; }
-.xp__what span { color: var(--gris); }
-.xp__what .xp__place { color: var(--texto); }
+.edu li:last-child { border-bottom: 1px solid var(--linea); }
+.edu__date { color: var(--gris); }
+.edu__what { display: flex; flex-direction: column; }
+.edu__place { color: var(--gris); }
+.extras { margin-top: 72px; max-width: 960px; }
 
 /* Galería de fotos */
 .gallery {
@@ -472,8 +509,12 @@ html.has-cursor, html.has-cursor * { cursor: none !important; }
   .card { order: var(--o); }
   .card__caption { font-size: 16px; }
   .section { padding-top: 112px; }
-  .xp { margin-top: 40px; }
-  .xp li { grid-template-columns: 1fr; gap: 2px; }
+  .jobs { margin-top: 40px; }
+  .job, .edu li { grid-template-columns: 1fr; gap: 4px; }
+  .job { padding: 24px 0; }
+  .job__highlights { padding: 14px 16px; }
+  .sub-label { margin-top: 64px; }
+  .extras { margin-top: 48px; }
   .gallery { gap: 16px; margin-top: 56px; }
   .case { padding-top: 32px; }
   .case__title { margin-top: 40px; }
