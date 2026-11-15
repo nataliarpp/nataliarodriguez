@@ -316,6 +316,17 @@ img.photo { display: block; height: auto; }
   transition: background-size .35s, color .2s;
   overflow-wrap: anywhere;
 }
+/* Enlaces dentro de un texto (nombres de empresa) */
+.inline-link {
+  color: var(--texto);
+  white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-color: var(--gris-claro);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color .2s, text-decoration-color .2s;
+}
+.inline-link:hover { color: var(--acento); text-decoration-color: var(--acento); }
 .link:hover { color: var(--texto); background-size: 100% 1px; }
 .footer {
   margin-top: auto;

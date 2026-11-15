@@ -23,9 +23,9 @@ const TEXTOS = {
 
     "hero.titulo": "Natalia Rodríguez és una product designer que dissenya experiències clares i humanes.",
     "hero.ahora.label": "Actualment",
-    "hero.ahora": "Dissenyant @&nbsp;Piper AI, <br>an Aircall company",
+    "hero.ahora": "Dissenyant <a class=\"inline-link\" href=\"https://www.piperai.com/es\" target=\"_blank\" rel=\"noopener\">Piper AI</a> <br>dins d'<a class=\"inline-link\" href=\"https://aircall.io/es/\" target=\"_blank\" rel=\"noopener\">Aircall</a>",
     "hero.antes.label": "Abans",
-    "hero.antes": "Dissenyadora @&nbsp;Antai Ventures, mentora @&nbsp;Nuclio <br>i dissenyadora gràfica @&nbsp;Jardín&nbsp;y&nbsp;Natura.",
+    "hero.antes": "Dissenyant noves startups a <a class=\"inline-link\" href=\"https://antaiventures.com/\" target=\"_blank\" rel=\"noopener\">Antai Ventures</a>, <br>creant packagings a <a class=\"inline-link\" href=\"https://jardinynatura.com/\" target=\"_blank\" rel=\"noopener\">Jardín y Natura</a> <br>i mentoritzant a <a class=\"inline-link\" href=\"https://nuclio.school/\" target=\"_blank\" rel=\"noopener\">Nuclio</a>.",
 
     "card.ver": "Veure cas d'estudi",
     "card.pronto": "Properament",
@@ -136,9 +136,9 @@ const TEXTOS = {
 
     "hero.titulo": "Natalia Rodríguez is a product designer who creates clear, human experiences.",
     "hero.ahora.label": "Currently",
-    "hero.ahora": "Designing @&nbsp;Piper AI, <br>an Aircall company",
+    "hero.ahora": "Designing <a class=\"inline-link\" href=\"https://www.piperai.com/\" target=\"_blank\" rel=\"noopener\">Piper AI</a> <br>within <a class=\"inline-link\" href=\"https://aircall.io/\" target=\"_blank\" rel=\"noopener\">Aircall</a>",
     "hero.antes.label": "Previously",
-    "hero.antes": "Designer @&nbsp;Antai Ventures, mentor @&nbsp;Nuclio <br>and graphic designer @&nbsp;Jardín&nbsp;y&nbsp;Natura.",
+    "hero.antes": "Designing new startups at <a class=\"inline-link\" href=\"https://antaiventures.com/\" target=\"_blank\" rel=\"noopener\">Antai Ventures</a>, <br>creating packaging at <a class=\"inline-link\" href=\"https://jardinynatura.com/\" target=\"_blank\" rel=\"noopener\">Jardín y Natura</a> <br>and mentoring at <a class=\"inline-link\" href=\"https://nuclio.school/\" target=\"_blank\" rel=\"noopener\">Nuclio</a>.",
 
     "card.ver": "View case study",
     "card.pronto": "Coming soon",
