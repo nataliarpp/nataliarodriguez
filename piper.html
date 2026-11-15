@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    CASO DE ESTUDIO: PIPER
+    - Los textos en español están aquí; el catalán y el inglés, en textos.js (etiquetas "pp.").
+    - IMÁGENES Y VÍDEOS: súbelos a la carpeta images/piper/ con el nombre que aparece en cada hueco.
+      Vale .jpg, .png, .webp, .gif o .mp4: la página detecta sola cuál has subido.
+  -->
+  <title data-i18n="pp.pagina">Piper AI — Natalia Rodríguez</title>
+  <meta name="description" content="Caso de estudio de Piper AI, por Natalia Rodríguez." data-i18n-content="pp.desc">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script>try{var t=localStorage.getItem("tema");if(t==="oscuro"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.dataset.theme="dark"}catch(e){}</script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__shape"></span><span class="cursor__label"></span></div>
+
+  <!-- ===== MENÚ LATERAL: índice del caso de estudio ===== -->
+  <aside class="sidebar">
+    <a href="index.html#use-cases" class="sidebar__name crumb">
+      <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+      <span data-i18n="nav.usecases">Casos de uso</span> <span class="slash">/</span> <b>Piper AI</b>
+    </a>
+    <nav class="sidebar__nav case-nav">
+      <a href="#resumen" class="is-active" data-i18n="pp.n.resumen">Resumen</a>
+      <a href="#contexto" data-i18n="pp.n.contexto">Contexto</a>
+      <a href="#rol" data-i18n="pp.n.rol">Mi rol</a>
+      <a href="#problema" data-i18n="pp.n.problema">Problema</a>
+      <a href="#proceso" data-i18n="pp.n.proceso">Proceso</a>
+      <a href="#research" data-i18n="pp.n.research">Research</a>
+      <a href="#solucion" data-i18n="pp.n.solucion">Solución</a>
+      <a href="#interfaz" data-i18n="pp.n.interfaz">Interfaz</a>
+      <a href="#branding" data-i18n="pp.n.branding">Branding</a>
+      <a href="#validacion" data-i18n="pp.n.validacion">Validación</a>
+      <a href="#mas" data-i18n="pp.n.mas">Más sobre Piper</a>
+    </nav>
+  </aside>
+
+  <main class="content pcase">
+
+    <!-- ===================== RESUMEN ===================== -->
+    <section id="resumen" data-section>
+      <div class="pc-narrow">
+        <h1 class="pc-title reveal">Piper</h1>
+        <p class="pc-lead reveal" data-i18n="pp.intro">En el mundo de las ventas, los comerciales tienen dificultades para mantener el CRM actualizado y los managers se enfrentan a datos inconsistentes. ¡Piper es la solución! Una automatización con IA que captura y actualiza las conversaciones de venta y ahorra muchísimo tiempo (emails de seguimiento, generación de tareas, chatbot con IA), para que los comerciales se centren en vender y los managers disfruten de datos fiables y en tiempo real.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media " data-media="images/piper/portada" style="aspect-ratio: 16 / 8.5"><span class="media__hint"><b>Portada</b>images/piper/portada.jpg · .png · .mp4</span></div></div>
+
+      <div class="pc-wide pc-split">
+        <dl class="pc-meta reveal">
+          <div><dt data-i18n="pp.m.sede">Sede</dt><dd data-i18n="pp.m.sede.v">Barcelona, España</dd></div>
+          <div><dt data-i18n="pp.m.fundacion">Fundación</dt><dd>2023</dd></div>
+          <div><dt data-i18n="pp.m.tipo">Tipo de empresa</dt><dd>Startup</dd></div>
+          <div><dt data-i18n="pp.m.sector">Sector</dt><dd data-i18n="pp.m.sector.v">Automatización con IA y ventas</dd></div>
+          <div><dt data-i18n="pp.m.modelo">Modelo de negocio</dt><dd>B2B</dd></div>
+          <div><dt data-i18n="pp.m.financiacion">Financiación</dt><dd data-i18n="pp.m.financiacion.v">3 M€</dd></div>
+          <div><dt data-i18n="pp.m.adquisicion">Adquisición</dt><dd data-i18n="pp.m.adquisicion.v">Piper AI fue adquirida por Aircall en marzo de 2026</dd></div>
+        </dl>
+
+        <div>
+          <div id="contexto" data-section>
+            <h2 class="pc-h2 reveal" data-i18n="pp.h.contexto">Contexto</h2>
+            <p class="pc-text reveal" data-i18n="pp.contexto">Los fundadores de Piper, a partir de su trayectoria y experiencia como comerciales y exdirectivos de Google, X y JobandTalent, buscaron el respaldo de Antai Ventures para desarrollar un producto que resolviera todos los problemas que se habían encontrado trabajando en el sector de las ventas.</p>
+          </div>
+          <div id="rol" class="pc-gap" data-section>
+            <h2 class="pc-h2 reveal" data-i18n="pp.h.rol">Mi rol y tareas</h2>
+            <p class="pc-text reveal" data-i18n="pp.rol">Lideré el diseño de producto —experiencia de usuario (UX) e interfaz (UI)— de este proyecto. También recibí feedback constructivo de los fundadores y del equipo de desarrollo para mejorar y ganar otras perspectivas sobre lo que estábamos diseñando. Mis tareas fueron:</p>
+            <ol class="pc-tasks reveal">
+            <li><span data-i18n="pp.t1">Entender el sector de las ventas y analizar la competencia.</span></li>
+            <li><span data-i18n="pp.t2">Estructurar datos para entender las necesidades, comportamientos y preferencias de los usuarios.</span></li>
+            <li><span data-i18n="pp.t3">Entrevistas a usuarios.</span></li>
+            <li><span data-i18n="pp.t4">Insights de clientes e ideación.</span></li>
+            <li><span data-i18n="pp.t5">Construcción de la visión del proyecto.</span></li>
+            <li><span data-i18n="pp.t6">Planificación y definición del alcance.</span></li>
+            <li><span data-i18n="pp.t7">Concepto de diseño y design system.</span></li>
+            <li><span data-i18n="pp.t8">Interfaz y experiencia de usuario.</span></li>
+            <li><span data-i18n="pp.t9">Soporte y contacto con desarrolladores y fundadores.</span></li>
+            <li><span data-i18n="pp.t10">Iteración del diseño a partir de los tests.</span></li>
+            </ol>
+            <!-- PENDIENTE: "Herramientas de diseño" (Design Toolkit). Dime qué herramientas usaste en Piper. -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROBLEMA ===================== -->
+    <section id="problema" class="pc-section pc-narrow" data-section>
+      <h2 class="pc-h2 reveal" data-i18n="pp.h.problema">Problema</h2>
+      <p class="pc-text reveal" data-i18n="pp.problema">El argumento y el problema principal que plantearon los fundadores al contactarnos para llevar a cabo el proyecto fue el siguiente:</p>
+      <blockquote class="pc-quote reveal">
+        <p data-i18n="pp.cita1">«El principal problema de un comercial es la mala relación que tiene con los CRM, porque le hacen la vida imposible. Los comerciales dedican muchísimo tiempo a introducir datos rutinarios, mientras que los managers se quejan de que los datos son inexactos e incompletos.</p>
+        <p data-i18n="pp.cita2">Y ese es su dilema: para obtener datos de calidad que les permitan dirigir su negocio, inevitablemente cargan a sus equipos con la introducción de datos en el CRM, lo que les distrae de vender.»</p>
+      </blockquote>
+    </section>
+
+    <!-- ===================== PROCESO ===================== -->
+    <section id="proceso" class="pc-section pc-narrow" data-section>
+      <h2 class="pc-h2 reveal" data-i18n="pp.h.proceso">Proceso de diseño</h2>
+      <p class="pc-text reveal" data-i18n="pp.proc1">En este caso de estudio, como he comentado, el problema principal lo identificaron los fundadores de la empresa. Así que nuestra tarea fue comprender el sector de las ventas, hacer un análisis en profundidad y mapear toda la competencia. Además, recopilamos y estructuramos datos para entender las necesidades, comportamientos y preferencias de los usuarios, con el fin de validar el problema y ofrecer la mejor solución posible.</p>
+      <p class="pc-text reveal" data-i18n="pp.proc2">Una vez tuvimos contexto, necesitábamos conocer el punto de vista de los usuarios sobre las dudas y oportunidades que habían surgido en la investigación.</p>
+      <p class="pc-text reveal" data-i18n="pp.proc3">Para ello, el primer paso del proceso de diseño fueron las entrevistas a usuarios y la investigación documental para entender cómo se comportaba la competencia. Creo que es clave obtener esta información al principio del proceso, antes de tener una idea concreta o de crear un prototipo.</p>
+      <p class="pc-text reveal" data-i18n="pp.proc4">Tras analizar esta información, empezamos a conceptualizar con el apoyo de la agencia Garaje de Ideas, que nos ayudó a definir el concepto de diseño, crear los primeros user flows y montar un UI Kit básico para empezar a diseñar.</p>
+      <p class="pc-text reveal" data-i18n="pp.proc5">Con esto terminado, nos centramos en crear los primeros wireframes para iterar ideas más rápido. A partir de ahí pasamos a la fase de producción: diseñamos la interfaz teniendo en cuenta principios de diseño como el contraste, la jerarquía y el feedback, e incorporamos los atributos definidos para la marca y las interacciones de los usuarios. Finalmente, desarrollamos un design system que daba soporte a todo el producto y un flujo completo dentro de la plataforma.</p>
+      <p class="pc-text reveal" data-i18n="pp.proc6">Tras cerrar la primera propuesta de Producto Mínimo Viable (MVP), pasamos a testear y presentar el producto a los usuarios. Con su feedback, entramos en procesos iterativos para aprender y mejorar el producto de forma continua. (En noviembre de 2023, Piper seguía en una fase de iteración y expansión continua.)</p>
+    </section>
+
+    <!-- ===================== RESEARCH ===================== -->
+    <section id="research" class="pc-section" data-section>
+      <div class="pc-narrow">
+        <h2 class="pc-h2 reveal" data-i18n="pp.h.research">Research</h2>
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.entrevistas">Entrevistas a usuarios</h3>
+        <p class="pc-text reveal" data-i18n="pp.entrevistas">Entrevistamos a usuarios con experiencia en el sector de las ventas (SDRs, Account Executives, Sales Reps, Sales Managers…) en sesiones de unos 30 minutos, en las que tratamos temas para entender sus mayores retos del día a día. Les preguntamos:</p>
+        <ul class="pc-bullets reveal">
+            <li><span data-i18n="pp.q1">¿Cuánto tiempo dedicas al día a tu CRM?</span></li>
+            <li><span data-i18n="pp.q2">¿Cuánto tiempo dedicas a introducir datos en el CRM frente al tiempo real de venta?</span></li>
+            <li><span data-i18n="pp.q3">¿Cuánto tiempo dedicas a tomar notas de tus llamadas?</span></li>
+            <li><span data-i18n="pp.q4">¿Repasas tus llamadas antes de volver a contactar con los clientes? Si es así, ¿cuánto tiempo te lleva?</span></li>
+            <li><span data-i18n="pp.q5">¿Pierdes deals por no mantener el contacto con el cliente?</span></li>
+            <li><span data-i18n="pp.q6">¿Tienes problemas dentro del equipo al compartir datos sobre un deal?</span></li>
+            <li><span data-i18n="pp.q7">¿Qué herramientas son imprescindibles en tu día a día?</span></li>
+        </ul>
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.insights">Customer insights</h3>
+        <p class="pc-text reveal" data-i18n="pp.insights">Tras analizar las entrevistas, y a pesar de la gran cantidad de datos generados, esta fue la información más relevante para tomar decisiones al crear la solución:</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media " data-media="images/piper/customer-insights" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Customer insights</b>images/piper/customer-insights.jpg · .png · .mp4</span></div></div>
+
+      <div class="pc-narrow">
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.desk">Desk research</h3>
+        <p class="pc-kicker reveal" data-i18n="pp.h.mercado">Investigación de mercado y producto</p>
+        <p class="pc-text reveal" data-i18n="pp.mercado">Descubrimos que había una gran oportunidad de negocio, tanto como CRM como en forma de add-on:</p>
+      </div>
+      <div class="pc-wide pc-stats reveal">
+        <div><strong data-i18n="pp.s1">6,5 M</strong><span data-i18n="pp.s1.t">comerciales, como mínimo, trabajan sin CRM</span></div>
+        <div><strong data-i18n="pp.s2">19,9 M</strong><span data-i18n="pp.s2.t">licencias de CRM activas en todo el mundo</span></div>
+        <div><strong data-i18n="pp.s3">14.400 M US$</strong><span data-i18n="pp.s3.t">de mercado potencial para add-ons de productividad para CRM</span></div>
+      </div>
+      <div class="pc-narrow">
+        <p class="pc-text reveal" data-i18n="pp.mercado2">Además, investigamos datos y hábitos relacionados con otros programas que usaban o eran CRM o asistentes de ventas. El objetivo era entender cómo se comportan los usuarios y cuáles eran los mayores puntos de fricción que mejorar.</p>
+        <p class="pc-text reveal" data-i18n="pp.mercado3">Para ello, estudiamos en detalle las funcionalidades de la competencia, cómo estaban compuestas sus plataformas y cuál era su propuesta de valor.</p>
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.deskins">Insights del desk research</h3>
+        <p class="pc-text pc-strong reveal" data-i18n="pp.deskins1">La conclusión principal es que los comerciales dedican una parte importante de su tiempo a tareas administrativas que no les permiten centrarse en vender.</p>
+        <p class="pc-text reveal" data-i18n="pp.deskins2">Aunque deberían dedicar su tiempo a videollamadas o reuniones presenciales con clientes, a menudo tienen que reservar tiempo antes para preparar la llamada. En muchos casos, eso implica repasar las notas o la grabación del último contacto con ese cliente, tomar notas durante las llamadas, actualizar y pasar esas notas a su CRM o compartirlas con alguien del equipo. Además, tienen que planificar el seguimiento con el cliente para agendar una nueva llamada o enviar emails recordatorios, entre otras tareas, para poder cerrar deals.</p>
+      </div>
+    </section>
+
+    <!-- ===================== SOLUCIÓN ===================== -->
+    <section id="solucion" class="pc-section" data-section>
+      <div class="pc-narrow">
+        <p class="pc-kicker reveal" data-i18n="pp.h.concepto">Concepto y producto</p>
+        <h2 class="pc-h2 reveal" data-i18n="pp.h.solucion">Solución</h2>
+        <p class="pc-text reveal" data-i18n="pp.sol1">Piper es una solución de inteligencia y productividad comercial de nueva generación que pone la IA al servicio de los comerciales y los sales managers. Gracias a su interpretación avanzada de las conversaciones de venta en videollamadas, emails y notas de audio, Piper rellena automáticamente los campos del CRM relacionados con cada deal, libera capacidad comercial y garantiza datos objetivos y de calidad.</p>
+        <p class="pc-text reveal" data-i18n="pp.sol2">Piper aligera aún más el trabajo diario de los comerciales ayudándoles en todas las fases de la relación con el cliente: mejora la preparación de reuniones, redacta emails de seguimiento, agenda la siguiente llamada, etc.</p>
+        <p class="pc-text reveal" data-i18n="pp.sol3">Piper acompaña al usuario en cada interacción con el cliente:</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media " data-media="images/piper/solucion" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Piper en cada interacción</b>images/piper/solucion.jpg · .png · .mp4</span></div></div>
+      <div class="pc-narrow">
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.flow">User flow</h3>
+        <p class="pc-text reveal" data-i18n="pp.flow">El objetivo principal del flujo era, y sigue siendo, que todas las funcionalidades estén siempre visibles para el usuario. El acceso a cada funcionalidad está en la barra lateral, excepto las notas y los emails de seguimiento, que están vinculados a cada contacto dentro de las pantallas de transcripciones, deals, contactos y empresas.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media " data-media="images/piper/user-flow" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>User flow</b>images/piper/user-flow.jpg · .png · .mp4</span></div></div>
+    </section>
+
+    <!-- ===================== INTERFAZ ===================== -->
+    <section id="interfaz" class="pc-section pc-ui" data-section>
+      <div class="pc-narrow"><h2 class="pc-h2 reveal" data-i18n="pp.h.interfaz">Interfaz de usuario | Prototipo</h2></div>
+      <div class="pc-block pc-narrow">
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.onb">Onboarding y asistente</h3>
+        <p class="pc-text reveal" data-i18n="pp.onb1">Cuando el usuario entra por primera vez en Piper, se encuentra un onboarding que le permite sincronizar su CRM y su calendario de Google o Microsoft, y personalizar todo el programa según sus necesidades: idioma, puesto dentro del sector de ventas, las palabras clave que más usa y sus campos.</p>
+        <p class="pc-text reveal" data-i18n="pp.onb2">El asistente está siempre en la parte superior de todas las pantallas. Se activa haciendo clic en él: solo hay que hacerle una pregunta o elegir una de las opciones sugeridas.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media " data-media="images/piper/onboarding" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Onboarding y asistente</b>images/piper/onboarding.jpg · .png · .mp4</span></div></div>
+      <div class="pc-block pc-narrow">
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.trans">Transcripción</h3>
+        <p class="pc-text reveal" data-i18n="pp.trans1">La transcripción es el resultado que la IA ofrece al usuario después de grabar y transcribir una llamada.</p>
+        <p class="pc-text reveal" data-i18n="pp.trans2">Presenta un resumen completo de todo lo que se habló en la llamada entre sus participantes. El usuario puede seleccionar y ver los fragmentos clave que Piper destaca de la llamada. Además, puede añadir notas personales y enviar un email de seguimiento a los contactos, ya sea para recordarles la conversación o para agendar automáticamente una nueva videollamada.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media " data-media="images/piper/transcripcion" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Transcripción</b>images/piper/transcripcion.jpg · .png · .mp4</span></div></div>
+      <div class="pc-block pc-narrow">
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.inter">Próximas interacciones</h3>
+        <p class="pc-text reveal" data-i18n="pp.inter1">Esta pantalla muestra todas las actividades pasadas y futuras asociadas al calendario y al CRM del usuario.</p>
+        <p class="pc-text reveal" data-i18n="pp.inter2">El usuario puede acceder a las actividades realizadas, en concreto a las llamadas que Piper ha transcrito, y también a las llamadas programadas, donde puede decidir si sincronizarlas o no con Piper para transcribirlas.</p>
+        <p class="pc-text reveal" data-i18n="pp.inter3">Además, hay una vista previa de distintos elementos: los contactos asociados a la llamada, los deals relacionados y la empresa a la que se refiere.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media " data-media="images/piper/interacciones" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Próximas interacciones</b>images/piper/interacciones.jpg · .png · .mp4</span></div></div>
+      <div class="pc-block pc-narrow">
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.pipe">Pipeline</h3>
+        <p class="pc-text reveal" data-i18n="pp.pipe">El Pipeline es la vista donde el comercial puede ver todos sus deals, las empresas asociadas y sus contactos, además de datos destacados como las interacciones recientes y próximas, la fuerza de la relación con cada deal, los estados, las notas, las transcripciones, etc.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media " data-media="images/piper/pipeline" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Pipeline</b>images/piper/pipeline.jpg · .png · .mp4</span></div></div>
+      <div class="pc-block pc-narrow">
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.emp">Empresas y contactos</h3>
+        <p class="pc-text reveal" data-i18n="pp.emp1">Estas dos pantallas muestran datos relevantes sobre las empresas y los contactos asociados al comercial.</p>
+        <p class="pc-text reveal" data-i18n="pp.emp2">En Empresas se destaca la información relevante sobre los deals asociados a cada empresa, y en Contactos, la relación y las interacciones con cada persona.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media " data-media="images/piper/empresas-contactos" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Empresas y contactos</b>images/piper/empresas-contactos.jpg · .png · .mp4</span></div></div>
+      <div class="pc-block pc-narrow">
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.integ">Integraciones</h3>
+        <p class="pc-text reveal" data-i18n="pp.integ">Piper se integra sin fricciones con las herramientas que ya usas, como HubSpot, Google Calendar, Microsoft Teams, Gmail, Google Meet y Zoom. Piper está estudiando otras posibles integraciones, aunque aún queda mucho por validar.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media " data-media="images/piper/integraciones" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Integraciones</b>images/piper/integraciones.jpg · .png · .mp4</span></div></div>
+    </section>
+
+    <!-- ===================== BRANDING ===================== -->
+    <section id="branding" class="pc-section" data-section>
+      <div class="pc-narrow">
+        <h2 class="pc-h2 reveal" data-i18n="pp.h.branding">Branding</h2>
+        <h3 class="pc-h3 reveal" data-i18n="pp.h.logo">Logotipo</h3>
+      </div>
+      <div class="pc-wide pc-cards pc-cards--2 reveal">
+        <div class="pc-card"><div class="media " data-media="images/piper/logo-1" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Logotipo 1</b>images/piper/logo-1.jpg · .png · .mp4</span></div></div>
+        <div class="pc-card"><div class="media " data-media="images/piper/logo-2" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Logotipo 2</b>images/piper/logo-2.jpg · .png · .mp4</span></div></div>
+      </div>
+      <div class="pc-wide pc-cards reveal">
+        <div class="pc-card"><div class="media " data-media="images/piper/logo-3" style="aspect-ratio: 16 / 8"><span class="media__hint"><b>Construcción del logotipo</b>images/piper/logo-3.jpg · .png · .mp4</span></div></div>
+      </div>
+
+      <div class="pc-narrow"><h3 class="pc-h3 reveal" data-i18n="pp.h.colores">Colores</h3></div>
+      <div class="pc-wide pc-cards pc-cards--2 reveal">
+        <div class="pc-card"><div class="media " data-media="images/piper/colores-1" style="aspect-ratio: 4 / 5"><span class="media__hint"><b>Colores 1</b>images/piper/colores-1.jpg · .png · .mp4</span></div></div>
+        <div class="pc-card"><div class="media " data-media="images/piper/colores-2" style="aspect-ratio: 4 / 5"><span class="media__hint"><b>Colores 2</b>images/piper/colores-2.jpg · .png · .mp4</span></div></div>
+      </div>
+
+      <div class="pc-narrow"><h3 class="pc-h3 reveal" data-i18n="pp.h.tipo">Tipografía y guía de estilo</h3></div>
+      <div class="pc-wide pc-cards pc-cards--2 reveal">
+        <div class="pc-card"><div class="media " data-media="images/piper/tipografia" style="aspect-ratio: 1 / 1"><span class="media__hint"><b>Tipografía</b>images/piper/tipografia.jpg · .png · .mp4</span></div></div>
+        <div class="pc-card"><div class="media " data-media="images/piper/estilos-texto" style="aspect-ratio: 1 / 1"><span class="media__hint"><b>Estilos de texto</b>images/piper/estilos-texto.jpg · .png · .mp4</span></div></div>
+        <div class="pc-card"><div class="media " data-media="images/piper/iconos" style="aspect-ratio: 1 / 1"><span class="media__hint"><b>Iconos</b>images/piper/iconos.jpg · .png · .mp4</span></div></div>
+        <div class="pc-card"><div class="media " data-media="images/piper/radios-sombras" style="aspect-ratio: 1 / 1"><span class="media__hint"><b>Border radius y sombras</b>images/piper/radios-sombras.jpg · .png · .mp4</span></div></div>
+      </div>
+
+      <div class="pc-narrow"><h3 class="pc-h3 reveal" data-i18n="pp.h.ilus">Ilustraciones</h3></div>
+      <div class="pc-wide pc-cards reveal">
+        <div class="pc-card"><div class="media " data-media="images/piper/ilustraciones" style="aspect-ratio: 16 / 4"><span class="media__hint"><b>Ilustraciones de marca</b>images/piper/ilustraciones.jpg · .png · .mp4</span></div></div>
+      </div>
+    </section>
+
+    <!-- ===================== VALIDACIÓN ===================== -->
+    <section id="validacion" class="pc-section pc-narrow" data-section>
+      <h2 class="pc-h2 reveal" data-i18n="pp.h.validacion">Validación</h2>
+      <p class="pc-text reveal" data-i18n="pp.validacion">Piper sigue iterando hoy en día con tests de usabilidad, tests A/B y otras encuestas en profundidad a usuarios para mejorar la primera versión, además de mejorar el producto para que sea más rápido y no tenga errores. El lanzamiento de esta plataforma es solo el primer paso hacia el éxito de la empresa.</p>
+    </section>
+
+    <!-- ===================== MÁS SOBRE PIPER ===================== -->
+    <section id="mas" class="pc-section pc-narrow pc-last" data-section>
+      <h2 class="pc-h2 reveal" data-i18n="pp.h.mas">Más sobre Piper</h2>
+
+      <h3 class="pc-h3 reveal" data-i18n="pp.h.web">Web</h3>
+      <div class="pc-link reveal">
+        <div class="media " data-media="images/piper/web" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Web de Piper</b>images/piper/web.jpg · .png · .mp4</span></div>
+        <div>
+          <p class="pc-link__title">Piperai.com</p>
+          <a class="pc-btn" href="https://www.piperai.com/" target="_blank" rel="noopener" data-i18n="pp.verweb">Ver web ↗</a>
+        </div>
+      </div>
+
+      <h3 class="pc-h3 reveal" data-i18n="pp.h.prensa">Artículos de prensa</h3>
+      <div class="pc-link reveal">
+        <div class="media " data-media="images/piper/prensa" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Foto de los fundadores</b>images/piper/prensa.jpg · .png · .mp4</span></div>
+        <div>
+          <p class="pc-link__title">El Español</p>
+          <p class="pc-link__quote" data-i18n="pp.prensa1">«Piper, la startup de IA fundada por exdirectivos de Google, X y JobandTalent, capta tres millones de euros».</p>
+          <a class="pc-btn" href="https://www.elespanol.com/invertia/disruptores-innovadores/disruptores/startups/20231025/piper-startup-ia-fundada-exdirectivos-google-jobandtalent-capta-millones-euros/804169853_0.html" target="_blank" rel="noopener" data-i18n="pp.leer">Leer artículo ↗</a>
+        </div>
+      </div>
+      <div class="pc-link reveal">
+        <div class="media " data-media="images/piper/prensa" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Foto de los fundadores</b>images/piper/prensa.jpg · .png · .mp4</span></div>
+        <div>
+          <p class="pc-link__title">The New Barcelona Post</p>
+          <p class="pc-link__quote" data-i18n="pp.prensa2">«La startup automatiza el llenado de datos de clientes y utiliza herramientas de IA para aumentar la productividad de los equipos de ventas».</p>
+          <a class="pc-btn" href="https://www.thenewbarcelonapost.com/piper-capta-tres-millones-con-apoyo-de-fundadores-de-jobantalent-doctoralia-y-colvin/" target="_blank" rel="noopener" data-i18n="pp.leer">Leer artículo ↗</a>
+        </div>
+      </div>
+
+      <h3 class="pc-h3 reveal" data-i18n="pp.h.gracias">Agradecimientos</h3>
+      <p class="pc-text reveal" data-i18n="pp.gracias">Muchísimas gracias a las personas que participaron en las entrevistas y nos dieron feedback para mejorar la idea; a Garaje de Ideas, por su aportación y ayuda en el proyecto; y, en especial, al trabajo y esfuerzo de los equipos de Antai Ventures y Piper.</p>
+
+      <a class="back-link" href="index.html#use-cases" data-i18n="pp.volver">← Volver a Casos de uso</a>
+    </section>
+
+  </main>
+
+  <script src="textos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

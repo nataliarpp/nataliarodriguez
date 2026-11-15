@@ -113,3 +113,10 @@ Las capturas se generan solas con el servicio gratuito de capturas de WordPress.
 Si alguna no te gusta, guarda tu propia captura en `images/previews/` con estos nombres
 y tendrá prioridad: `piperai.jpg`, `aircall.jpg`, `antaiventures.jpg`, `jardinynatura.jpg`, `nuclio.jpg`
 (mejor en horizontal, por ejemplo 1280 × 800).
+
+### Imágenes y vídeos de un caso de estudio (por ejemplo, Piper)
+Cada hueco de `piper.html` muestra el nombre del archivo que espera (por ejemplo `images/piper/onboarding`).
+1. En GitHub, entra en la carpeta `images/piper` → **Add file → Upload files**.
+2. Arrastra tus archivos con **exactamente ese nombre** (puede ser .jpg, .png, .webp, .gif o .mp4).
+3. **Commit changes**. En un minuto aparecen en la web, sin tocar el código.
+GitHub solo deja subir archivos de hasta **25 MB** desde el navegador: si un vídeo pesa más, comprímelo antes.

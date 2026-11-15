@@ -468,6 +468,149 @@ img.photo { display: block; height: auto; }
 .flag--ca { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 6'%3E%3Crect width='9' height='6' fill='%23FCDD09'/%3E%3Cpath d='M0 1h9M0 2.333h9M0 3.667h9M0 5h9' stroke='%23DA121A' stroke-width='.667'/%3E%3C/svg%3E"); }
 .flag--en { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='t'%3E%3Cpath d='M30,15h30v15zv15h-30zh-30v-15zv-15h30z'/%3E%3C/clipPath%3E%3Cpath d='M0,0v30h60v-30z' fill='%23012169'/%3E%3Cpath d='M0,0 60,30M60,0 0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 60,30M60,0 0,30' clip-path='url(%23t)' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30,0v30M0,15h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0v30M0,15h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/svg%3E"); }
 
+/* =========================================================
+   CASO DE ESTUDIO (Piper y los siguientes)
+   ========================================================= */
+.pcase { padding-top: 96px; }
+.pc-narrow { max-width: 720px; margin-left: auto; margin-right: auto; }
+.pc-wide { max-width: 1040px; margin: 56px auto 0; }
+.pc-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(40px, 4vw, 64px);
+  line-height: 1.1;
+  color: var(--titular);
+}
+.pc-lead { margin-top: 24px; font-size: 20px; line-height: 1.6; color: var(--texto-2); }
+.pc-split { display: grid; grid-template-columns: 200px minmax(0, 720px); gap: 64px; justify-content: center; margin-top: 72px; }
+.pc-meta div { margin-bottom: 22px; }
+.pc-meta dt { color: var(--etiqueta); font-size: 15px; }
+.pc-meta dd { color: var(--texto-2); }
+.pc-section { padding-top: 140px; }
+.pc-gap { margin-top: 72px; }
+.pc-h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(28px, 2.6vw, 40px);
+  line-height: 1.25;
+  color: var(--titular);
+  margin-bottom: 8px;
+}
+.pc-h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--titular);
+  margin-top: 56px;
+}
+.pc-kicker { color: var(--etiqueta); margin-bottom: 8px; }
+.pc-text { margin-top: 16px; color: var(--texto-2); line-height: 1.7; }
+.pc-strong { color: var(--texto); font-size: 19px; }
+.pc-block { margin-top: 96px; }
+
+/* Lista numerada de tareas */
+.pc-tasks {
+  list-style: none;
+  counter-reset: tarea;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+}
+.pc-tasks li {
+  counter-increment: tarea;
+  display: flex;
+  gap: 14px;
+  padding: 12px 0;
+  border-top: 1px solid var(--linea);
+  color: var(--texto-2);
+}
+.pc-tasks li::before { content: counter(tarea, decimal-leading-zero); color: var(--etiqueta); min-width: 22px; }
+
+/* Lista de preguntas */
+.pc-bullets { list-style: none; margin-top: 20px; display: grid; gap: 10px; }
+.pc-bullets li { position: relative; padding-left: 22px; color: var(--texto-2); }
+.pc-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .7em;
+  width: 6px;
+  height: 6px;
+  background: var(--hover);
+}
+
+/* Cita del problema */
+.pc-quote {
+  margin-top: 28px;
+  padding-left: 24px;
+  border-left: 2px solid var(--hover);
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.6;
+  color: var(--texto);
+}
+.pc-quote p + p { margin-top: 16px; }
+
+/* Cifras de mercado */
+.pc-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.pc-stats div { padding-top: 18px; border-top: 1px solid var(--linea); display: flex; flex-direction: column; gap: 6px; }
+.pc-stats strong { white-space: nowrap; font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 2.5vw, 36px); line-height: 1.1; color: var(--titular); }
+.pc-stats span { color: var(--texto-2); font-size: 15px; }
+
+/* Tarjetas blancas (branding) */
+.pc-cards { display: grid; gap: 24px; margin-top: 24px; }
+.pc-cards--2 { grid-template-columns: 1fr 1fr; }
+.pc-card { background: #FFFFFF; border-radius: 20px; padding: 20px; }
+:root[data-theme="dark"] .pc-card { background: var(--panel); }
+
+/* Huecos de imagen o vídeo: se rellenan solos al subir el archivo */
+.media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px dashed var(--gris-claro);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.pc-card .media { border-radius: 10px; }
+.media__hint { display: grid; gap: 4px; padding: 16px; font-size: 13px; color: var(--gris); }
+.media__hint b { font-weight: 500; font-size: 15px; color: var(--texto-2); }
+.media.is-loaded { border: 0; display: block; }
+.media img, .media video { display: block; width: 100%; height: auto; }
+
+/* Web y artículos de prensa */
+.pc-link { display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: center; margin-top: 24px; }
+.pc-link + .pc-link { margin-top: 40px; }
+.pc-link__title { font-size: 22px; color: var(--texto); }
+.pc-link__quote { margin: 10px 0 18px; color: var(--texto-2); }
+.pc-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 7px 14px;
+  background: #2B3442;
+  color: #FFFEFB;
+  font-size: 15px;
+  transition: background-color .2s;
+}
+.pc-link__quote + .pc-btn { margin-top: 0; }
+.pc-btn:hover { background: var(--hover); }
+.pc-last { min-height: 80vh; }
+
+@media (max-width: 800px) {
+  .pcase { padding-top: 32px; }
+  .case-nav { display: none; }
+  .pc-split, .pc-cards--2, .pc-stats, .pc-link, .pc-tasks { grid-template-columns: 1fr; }
+  .pc-split { gap: 40px; margin-top: 48px; }
+  .pc-section { padding-top: 96px; }
+  .pc-lead { font-size: 18px; }
+  .pc-quote { font-size: 18px; }
+  .pc-link { gap: 20px; }
+}
+
 /* ===== Vista previa de las webs al pasar el ratón por un enlace ===== */
 .preview {
   position: fixed;

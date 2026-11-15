@@ -1,4 +1,51 @@
 // =========================================================
+// 0. Huecos de imagen o vídeo (<div class="media" data-media="images/piper/portada">)
+//    Busca el archivo con distintas extensiones y muestra el primero que exista.
+//    Así solo hay que subir el archivo con el nombre correcto: no hace falta tocar el código.
+// =========================================================
+const EXTENSIONES = ["jpg", "png", "webp", "mp4", "gif", "jpeg", "webm"];
+
+function cargarMedia(el, i = 0) {
+  if (i >= EXTENSIONES.length) return;              // no hay archivo: se queda el hueco
+  const ext = EXTENSIONES[i];
+  const src = el.dataset.media + "." + ext;
+  const etiqueta = el.querySelector(".media__hint b");
+  const siguiente = () => cargarMedia(el, i + 1);
+  const listo = (nodo) => {
+    el.innerHTML = "";
+    el.appendChild(nodo);
+    el.style.aspectRatio = "auto";
+    el.classList.add("is-loaded");
+  };
+  if (ext === "mp4" || ext === "webm") {
+    const v = document.createElement("video");
+    v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
+    v.setAttribute("muted", ""); v.setAttribute("playsinline", "");
+    v.preload = "metadata";
+    v.onloadeddata = () => { listo(v); v.play().catch(() => {}); };
+    v.onerror = siguiente;
+    v.src = src;
+  } else {
+    const img = new Image();
+    img.alt = etiqueta ? etiqueta.textContent : "";
+    img.decoding = "async";
+    img.onload = () => listo(img);
+    img.onerror = siguiente;
+    img.src = src;
+  }
+}
+
+const medias = document.querySelectorAll(".media[data-media]");
+if (medias.length) {
+  const mediaObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) { cargarMedia(entry.target); mediaObserver.unobserve(entry.target); }
+    });
+  }, { rootMargin: "800px 0px" });
+  medias.forEach((el) => mediaObserver.observe(el));
+}
+
+// =========================================================
 // 1. Aparecer suavemente al hacer scroll
 // =========================================================
 const revealObserver = new IntersectionObserver((entries) => {
