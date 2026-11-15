@@ -568,7 +568,7 @@ img.photo { display: block; height: auto; }
 /* Tarjetas blancas (branding) */
 .pc-cards { display: grid; gap: 24px; margin-top: 24px; }
 .pc-cards--2 { grid-template-columns: 1fr 1fr; }
-.pc-card { background: #FFFFFF; border-radius: 20px; padding: 20px; }
+.pc-card { background: #FFFFFF; border-radius: 20px; overflow: hidden; }
 :root[data-theme="dark"] .pc-card { background: var(--panel); }
 
 /* Huecos de imagen o vídeo: se rellenan solos al subir el archivo */
@@ -582,7 +582,8 @@ img.photo { display: block; height: auto; }
   place-items: center;
   text-align: center;
 }
-.pc-card .media { border-radius: 10px; }
+.pc-card .media { border-radius: 0; }
+.pc-card .media:not(.is-loaded) { min-height: 120px; }
 .media__hint { display: grid; gap: 4px; padding: 16px; font-size: 13px; color: var(--gris); }
 .media__hint b { font-weight: 500; font-size: 15px; color: var(--texto-2); }
 .media.is-loaded { border: 0; display: block; }
