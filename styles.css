@@ -451,7 +451,7 @@ img.photo { display: block; height: auto; }
   pointer-events: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   opacity: 0;
   transition: opacity .2s;
   will-change: transform;
@@ -469,7 +469,7 @@ img.photo { display: block; height: auto; }
   background: var(--cursor);
   color: var(--cursor-texto);
   font: 400 15px/1.35 var(--sans);
-  padding: 9px 13px;
+  padding: 4px 9px;
   opacity: 0;
   transform: scale(.85);
   transform-origin: left center;
