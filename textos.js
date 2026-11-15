@@ -21,7 +21,6 @@ const TEXTOS = {
     "nav.about": "Sobre mi",
     "nav.contacto": "Contacte",
 
-    "hero.titulo": "Natalia Rodríguez és una product designer que dissenya experiències clares i humanes.",
     "hero.ahora.label": "Actualment",
     "hero.ahora": "Dissenyant <a class=\"inline-link\" href=\"https://www.piperai.com/es\" target=\"_blank\" rel=\"noopener\">Piper AI</a> <br>des d'<a class=\"inline-link\" href=\"https://aircall.io/es/\" target=\"_blank\" rel=\"noopener\">Aircall</a>",
     "hero.antes.label": "Abans",
@@ -134,7 +133,6 @@ const TEXTOS = {
     "nav.about": "About me",
     "nav.contacto": "Contact",
 
-    "hero.titulo": "Natalia Rodríguez is a product designer who creates clear, human experiences.",
     "hero.ahora.label": "Currently",
     "hero.ahora": "Designing <a class=\"inline-link\" href=\"https://www.piperai.com/\" target=\"_blank\" rel=\"noopener\">Piper AI</a> <br>at <a class=\"inline-link\" href=\"https://aircall.io/\" target=\"_blank\" rel=\"noopener\">Aircall</a>",
     "hero.antes.label": "Previously",

@@ -122,11 +122,11 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .hero {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(38px, 4.6vw, 80px);
-  line-height: 1.2;
+  font-size: clamp(36px, 3.6vw, 56px);
+  line-height: 1.15;
   letter-spacing: -0.015em;
-  max-width: 17ch;
 }
+.hero__role { margin-top: 10px; font-size: 21px; color: var(--texto-2); }
 .meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, max-content));
