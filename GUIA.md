@@ -79,3 +79,19 @@ Desde la propia web de GitHub, sin instalar nada:
 ### Cambiar colores o tipografías
 En `styles.css`, arriba del todo, hay un bloque `:root` con los colores. Cambia el código
 del color (por ejemplo `#F7F5F1`) y se actualiza toda la web.
+
+---
+
+## Cómo está organizada tu web
+
+| Archivo | Qué contiene |
+|---|---|
+| `index.html` | La página principal: **Use cases**, **Experiencia** y **Contacto**. |
+| `proyecto-1.html` | La plantilla de un caso de estudio. Para otro proyecto, duplícala (`proyecto-2.html`) y enlázala desde la tarjeta en `index.html`. |
+| `styles.css` | El diseño. Arriba del todo están **tus colores** (Neutral, Earth, Caramel, Olive, Mint, Sky, Ocean y Blueberry). |
+| `script.js` | El cursor, el menú que se ilumina, el modo oscuro y las animaciones. No hace falta tocarlo. |
+
+### Trucos rápidos
+- **Color del cursor:** en `styles.css` cambia `--acento: #556D96;` (Blueberry) por `#8C9B6E` (Olive).
+- **Etiqueta que sale al pasar el ratón:** en `index.html`, cambia el texto de `data-tooltip="..."`.
+- **Poner una imagen en una tarjeta:** súbela a la carpeta `images` y pon `<img src="images/nombre.jpg" alt="Descripción">` dentro del `<div class="cover ...">`.
