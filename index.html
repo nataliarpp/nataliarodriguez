@@ -218,42 +218,45 @@
         <p class="about__title reveal" data-i18n="about.titulo">Cuando no estoy diseñando…</p>
 
         <!--
-          FOTOS: cuando tengas cada foto, súbela a la carpeta "images" con el nombre indicado
+          FOTOS: el texto de data-tooltip="..." es lo que sale al pasar el ratón.
+          En el móvil (donde no hay ratón) ese mismo texto se muestra debajo de la foto (<p class="about__note">).
+          Si cambias uno, cambia también el otro.
+          --- cuando tengas cada foto, súbela a la carpeta "images" con el nombre indicado
           y cambia el <div class="photo" ...>...</div> por la línea <img ...> del comentario.
         -->
         <div class="gallery">
 
           <figure class="reveal">
-            <figcaption>01 <span class="slash">/</span> <span data-i18n="about.1">Yo</span></figcaption>
-            <img class="photo" src="images/yo.jpg" width="900" height="1125" loading="lazy" alt="Foto de Natalia" data-i18n-alt="about.1.alt" data-tooltip="¡Esa soy yo! :)" data-i18n-tooltip="about.1.tip">
+            <figcaption>01 <span class="slash">/</span> Me</figcaption>
+            <img class="photo" src="images/yo.jpg" width="900" height="1125" loading="lazy" alt="Foto de Natalia" data-i18n-alt="about.1.alt" data-tooltip="Mi nombre es Natalia, pero suelen llamarme “Nat”." data-i18n-tooltip="about.1.nota">
             <p class="about__note" data-i18n="about.1.nota">Mi nombre es Natalia, pero suelen llamarme “Nat”.</p>
           </figure>
 
           <figure class="reveal">
             <figcaption>02 <span class="slash">/</span> Bookstagram</figcaption>
-            <a class="photo-link" href="https://www.instagram.com/natbookish/" target="_blank" rel="noopener" data-tooltip="@natbookish ↗">
+            <a class="photo-link" href="https://www.instagram.com/natbookish/" target="_blank" rel="noopener" data-tooltip="Leo unos 50 libros al año y publico reseñas en @natbookish ↗" data-i18n-tooltip="about.2.nota">
               <img class="photo" src="images/bookstagram.jpg" width="900" height="1125" loading="lazy" alt="Un libro abierto lleno de marcapáginas" data-i18n-alt="about.2.alt">
             </a>
-            <p class="about__note" data-i18n="about.2.nota">Leo unos 50 libros al año y publico reseñas de mis lecturas.</p>
+            <p class="about__note" data-i18n="about.2.nota">Leo unos 50 libros al año y publico reseñas en @natbookish ↗</p>
           </figure>
 
           <figure class="reveal">
             <figcaption>03 <span class="slash">/</span> Batman &amp; Robbin</figcaption>
-            <img class="photo" src="images/batman-robbin.jpg" width="900" height="1125" loading="lazy" alt="Mis gatos Batman y Robbin durmiendo enroscados" data-i18n-alt="about.3.alt" data-tooltip="Mis hijos gatunos" data-i18n-tooltip="about.3.tip">
+            <img class="photo" src="images/batman-robbin.jpg" width="900" height="1125" loading="lazy" alt="Mis gatos Batman y Robbin durmiendo enroscados" data-i18n-alt="about.3.alt" data-tooltip="Mis hijos gatunos." data-i18n-tooltip="about.3.nota">
             <p class="about__note" data-i18n="about.3.nota">Mis hijos gatunos.</p>
           </figure>
 
           <figure class="reveal">
             <figcaption>04 <span class="slash">/</span> <span data-i18n="about.4">Patinaje artístico</span></figcaption>
-            <img class="photo" src="images/patines.jpg" width="900" height="1125" loading="lazy" alt="Mis patines de patinaje artístico" data-i18n-alt="about.4.alt" data-tooltip="Mis patines" data-i18n-tooltip="about.4.tip">
+            <img class="photo" src="images/patines.jpg" width="900" height="1125" loading="lazy" alt="Mis patines de patinaje artístico" data-i18n-alt="about.4.alt" data-tooltip="En 2025 colgué los patines, pero fui patinadora artística y entrené desde pequeñita." data-i18n-tooltip="about.4.nota">
             <p class="about__note" data-i18n="about.4.nota">En 2025 colgué los patines, pero fui patinadora artística y entrené desde pequeñita.</p>
           </figure>
 
           <figure class="reveal">
             <figcaption>05 <span class="slash">/</span> <span data-i18n="about.5">Mentorías en Nuclio</span></figcaption>
             <!-- PENDIENTE: cuando tengas la foto, súbela como images/nuclio.jpg y cambia el <div class="photo" ...>...</div> por:
-                 <img class="photo" src="images/nuclio.jpg" width="900" height="1125" loading="lazy" alt="Presentaciones de mis alumnos en Nuclio" data-tooltip="Mis alumnos presentando" data-i18n-tooltip="about.5.tip"> -->
-            <div class="photo" style="aspect-ratio: 4 / 5; --c:#DCE6F3" data-tooltip="Mis alumnos presentando" data-i18n-tooltip="about.5.tip"><span data-i18n="about.foto">Foto</span></div>
+                 <img class="photo" src="images/nuclio.jpg" width="900" height="1125" loading="lazy" alt="Presentaciones de mis alumnos en Nuclio" data-tooltip="Acompañando a mis alumnos en la presentación de sus proyectos." data-i18n-tooltip="about.5.nota"> -->
+            <div class="photo" style="aspect-ratio: 4 / 5; --c:#DCE6F3" data-tooltip="Acompañando a mis alumnos en la presentación de sus proyectos." data-i18n-tooltip="about.5.nota"><span data-i18n="about.foto">Foto</span></div>
             <p class="about__note" data-i18n="about.5.nota">Acompañando a mis alumnos en la presentación de sus proyectos.</p>
           </figure>
 

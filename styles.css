@@ -285,6 +285,8 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .photo-link { display: block; }
 .photo-link .photo { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
 .photo-link:hover .photo { transform: translateY(-4px); }
+/* La frase debajo de cada foto solo se ve en el móvil; en ordenador sale al pasar el ratón */
+@media (hover: hover) and (pointer: fine) { .about__note { display: none; } }
 .about__note { margin-top: 12px; color: var(--texto-2); font-size: 15px; line-height: 1.5; }
 .photo {
   width: 100%;
@@ -465,17 +467,20 @@ img.photo { display: block; height: auto; }
 }
 .cursor.is-text .cursor__shape { width: 2px; height: var(--caret, 24px); }
 .cursor__label {
+  max-width: 300px;
+  line-height: 1.35;
   background: var(--cursor);
   color: var(--cursor-texto);
   font: 500 16px/1 var(--sans);
   padding: 9px 13px;
-  white-space: nowrap;
   opacity: 0;
   transform: scale(.85);
   transform-origin: left center;
   transition: opacity .18s, transform .18s;
 }
 .cursor.has-label .cursor__label { opacity: 1; transform: none; }
+.cursor.is-flipped { flex-direction: row-reverse; }
+.cursor.is-flipped .cursor__label { transform-origin: right center; }
 html.has-cursor, html.has-cursor * { cursor: none !important; }
 
 /* ===== Animación al hacer scroll ===== */

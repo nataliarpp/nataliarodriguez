@@ -216,7 +216,11 @@ if (cursor && hasMouse) {
   (function follow() {
     cx += (x - cx) * 0.35;
     cy += (y - cy) * 0.35;
-    cursor.style.transform = `translate(${cx + offsetX}px, ${cy}px) translateY(-50%)`;
+    // Si la etiqueta no cabe a la derecha, se abre hacia la izquierda
+    const flip = cursor.classList.contains("has-label") && x + cursor.offsetWidth + 24 > window.innerWidth;
+    cursor.classList.toggle("is-flipped", flip);
+    const dx = flip ? -cursor.offsetWidth + 6 : offsetX;
+    cursor.style.transform = `translate(${cx + dx}px, ${cy}px) translateY(-50%)`;
     requestAnimationFrame(follow);
   })();
 }
