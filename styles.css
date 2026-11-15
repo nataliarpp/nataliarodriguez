@@ -265,15 +265,27 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .edu__place { color: var(--gris); }
 .extras { margin-top: 72px; max-width: 960px; }
 
-/* Galería de fotos */
+/* About me: galería de fotos en mosaico */
+.about { margin-top: 120px; }
+.about .sub-label { margin-top: 0; }
+.about__title {
+  margin-top: 12px;
+  font-family: var(--serif);
+  font-size: clamp(26px, 2.4vw, 40px);
+  line-height: 1.3;
+}
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 24px;
   align-items: start;
-  margin-top: 96px;
+  margin-top: 48px;
 }
 .gallery figcaption { color: var(--gris); margin-bottom: 14px; }
+.photo-link { display: block; }
+.photo-link .photo { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.photo-link:hover .photo { transform: translateY(-4px); }
+.about__note { margin-top: 12px; color: var(--texto-2); font-size: 15px; line-height: 1.5; }
 .photo {
   width: 100%;
   object-fit: cover;
@@ -515,7 +527,9 @@ html.has-cursor, html.has-cursor * { cursor: none !important; }
   .job__highlights { padding: 14px 16px; }
   .sub-label { margin-top: 64px; }
   .extras { margin-top: 48px; }
-  .gallery { gap: 16px; margin-top: 56px; }
+  .gallery { gap: 32px 16px; margin-top: 32px; }
+  .about { margin-top: 80px; }
+  .about__note { font-size: 14px; }
   .case { padding-top: 32px; }
   .case__title { margin-top: 40px; }
   .case__section { padding-top: 80px; }

@@ -212,25 +212,55 @@
         </div>
       </div>
 
-      <!-- Fotos sobre ti. Para poner una foto, cambia el <div class="photo ..."> por
-           <img class="photo" src="images/foto.jpg" alt="Foto de Natalia" data-tooltip="¡Esa soy yo! :)" data-i18n-tooltip="gal.yo.tip"> -->
-      <div class="gallery">
-        <figure class="reveal">
-          <figcaption>01 <span class="slash">/</span> <span data-i18n="gal.1">Yo</span></figcaption>
-          <div class="photo" style="aspect-ratio: 4 / 5; --c:#ECE7DF" data-tooltip="¡Esa soy yo! :)" data-i18n-tooltip="gal.yo.tip"><span data-i18n="gal.tufoto">Tu foto</span></div>
-        </figure>
-        <figure class="reveal">
-          <figcaption>02 <span class="slash">/</span> <span data-i18n="gal.2">Workshops</span></figcaption>
-          <div class="photo" style="aspect-ratio: 3 / 2; --c:#C1D4ED" data-tooltip="Foto" data-i18n-tooltip="gal.foto"><span data-i18n="gal.foto">Foto</span></div>
-        </figure>
-        <figure class="reveal">
-          <figcaption>03 <span class="slash">/</span> <span data-i18n="gal.3">Equipo</span></figcaption>
-          <div class="photo" style="aspect-ratio: 3 / 4; --c:#CBE1C8" data-tooltip="Foto" data-i18n-tooltip="gal.foto"><span data-i18n="gal.foto">Foto</span></div>
-        </figure>
-        <figure class="reveal">
-          <figcaption>04 <span class="slash">/</span> <span data-i18n="gal.4">Fuera del trabajo</span></figcaption>
-          <div class="photo" style="aspect-ratio: 1 / 1; --c:#E3DED5" data-tooltip="Foto" data-i18n-tooltip="gal.foto"><span data-i18n="gal.foto">Foto</span></div>
-        </figure>
+      <!-- ===================== ABOUT ME ===================== -->
+      <div id="about-me" class="about">
+        <h3 class="sub-label reveal">About me</h3>
+        <p class="about__title reveal" data-i18n="about.titulo">Cuando no estoy diseñando…</p>
+
+        <!--
+          FOTOS: cuando tengas cada foto, súbela a la carpeta "images" con el nombre indicado
+          y cambia el <div class="photo" ...>...</div> por la línea <img ...> del comentario.
+        -->
+        <div class="gallery">
+
+          <figure class="reveal">
+            <figcaption>01 <span class="slash">/</span> <span data-i18n="about.1">Yo</span></figcaption>
+            <!-- <img class="photo" src="images/yo.jpg" alt="Foto de Natalia" style="aspect-ratio: 4 / 5" data-tooltip="¡Esa soy yo! :)" data-i18n-tooltip="about.1.tip"> -->
+            <div class="photo" style="aspect-ratio: 4 / 5; --c:#ECE7DF" data-tooltip="¡Esa soy yo! :)" data-i18n-tooltip="about.1.tip"><span data-i18n="about.foto">Foto</span></div>
+          </figure>
+
+          <figure class="reveal">
+            <figcaption>02 <span class="slash">/</span> Bookstagram</figcaption>
+            <!-- CAMBIA ESTO: pon el enlace a tu bookstagram en href="..." -->
+            <a class="photo-link" href="https://www.instagram.com/" target="_blank" rel="noopener" data-tooltip="Ver mis reseñas ↗" data-i18n-tooltip="about.2.tip">
+              <!-- <img class="photo" src="images/bookstagram.jpg" alt="Libros de mi bookstagram" style="aspect-ratio: 1 / 1"> -->
+              <div class="photo" style="aspect-ratio: 1 / 1; --c:#C1D4ED"><span data-i18n="about.foto">Foto</span></div>
+            </a>
+            <p class="about__note" data-i18n="about.2.nota">Leo unos 50 libros al año y publico reseñas de mis lecturas.</p>
+          </figure>
+
+          <figure class="reveal">
+            <figcaption>03 <span class="slash">/</span> Batman &amp; Robbin</figcaption>
+            <!-- <img class="photo" src="images/batman-robbin.jpg" alt="Mis gatos Batman y Robbin" style="aspect-ratio: 4 / 5" data-tooltip="Mis hijos gatunos" data-i18n-tooltip="about.3.tip"> -->
+            <div class="photo" style="aspect-ratio: 4 / 5; --c:#CBE1C8" data-tooltip="Mis hijos gatunos" data-i18n-tooltip="about.3.tip"><span data-i18n="about.foto">Foto</span></div>
+            <p class="about__note" data-i18n="about.3.nota">Mis hijos gatunos.</p>
+          </figure>
+
+          <figure class="reveal">
+            <figcaption>04 <span class="slash">/</span> <span data-i18n="about.4">Patinaje artístico</span></figcaption>
+            <!-- <img class="photo" src="images/patines.jpg" alt="Mis patines de patinaje artístico" style="aspect-ratio: 1 / 1" data-tooltip="Mis patines" data-i18n-tooltip="about.4.tip"> -->
+            <div class="photo" style="aspect-ratio: 1 / 1; --c:#E3DED5" data-tooltip="Mis patines" data-i18n-tooltip="about.4.tip"><span data-i18n="about.foto">Foto</span></div>
+            <p class="about__note" data-i18n="about.4.nota">Antes de diseñar, fui patinadora de patinaje artístico.</p>
+          </figure>
+
+          <figure class="reveal">
+            <figcaption>05 <span class="slash">/</span> <span data-i18n="about.5">Mentorías en Nuclio</span></figcaption>
+            <!-- <img class="photo" src="images/nuclio.jpg" alt="Presentaciones de mis alumnos en Nuclio" style="aspect-ratio: 4 / 3" data-tooltip="Mis alumnos presentando" data-i18n-tooltip="about.5.tip"> -->
+            <div class="photo" style="aspect-ratio: 4 / 3; --c:#DCE6F3" data-tooltip="Mis alumnos presentando" data-i18n-tooltip="about.5.tip"><span data-i18n="about.foto">Foto</span></div>
+            <p class="about__note" data-i18n="about.5.nota">Acompañando a mis alumnos en la presentación de sus proyectos.</p>
+          </figure>
+
+        </div>
       </div>
     </section>
 
