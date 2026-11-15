@@ -37,20 +37,135 @@ if (sections.length) {
 }
 
 // =========================================================
-// 3. Botón de modo claro / oscuro
+// 3. Barra flotante de abajo: modo oscuro + idioma
 // =========================================================
-const toggle = document.querySelector(".theme-toggle");
-if (toggle) {
-  toggle.addEventListener("click", () => {
-    const root = document.documentElement;
-    const dark = root.dataset.theme === "dark";
-    if (dark) delete root.dataset.theme; else root.dataset.theme = "dark";
-    try { localStorage.setItem("tema", dark ? "claro" : "oscuro"); } catch (e) {}
-  });
+const IDIOMAS = [
+  { code: "en", nombre: "English" },
+  { code: "es", nombre: "Español" },
+  { code: "ca", nombre: "Català" },
+];
+
+// Textos de la propia barra (para lectores de pantalla)
+const TEXTOS_BARRA = {
+  es: { tema: "Cambiar entre modo claro y oscuro", idioma: "Cambiar idioma" },
+  ca: { tema: "Canvia entre mode clar i fosc", idioma: "Canvia d'idioma" },
+  en: { tema: "Switch between light and dark mode", idioma: "Change language" },
+};
+
+const ICONO_LUNA = '<svg class="icon-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>';
+const ICONO_SOL = '<svg class="icon-sun" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"/></svg>';
+const ICONO_FLECHA = '<svg class="lang__chev" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l4-4 4 4"/></svg>';
+const ICONO_CHECK = '<svg class="lang__check" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg>';
+
+const barra = document.createElement("div");
+barra.className = "controls";
+barra.innerHTML = `
+  <button class="controls__btn theme-btn" type="button">${ICONO_LUNA}${ICONO_SOL}</button>
+  <span class="controls__sep" aria-hidden="true"></span>
+  <div class="lang">
+    <button class="controls__btn lang__btn" type="button" aria-haspopup="true" aria-expanded="false">
+      <span class="flag"></span><span class="lang__code"></span>${ICONO_FLECHA}
+    </button>
+    <ul class="lang__menu">
+      ${IDIOMAS.map((i) => `
+        <li><button class="lang__option" type="button" data-lang="${i.code}" lang="${i.code}">
+          <span class="flag flag--${i.code}"></span>${i.nombre}${ICONO_CHECK}
+        </button></li>`).join("")}
+    </ul>
+  </div>`;
+document.body.appendChild(barra);
+
+// --- Modo oscuro ---
+barra.querySelector(".theme-btn").addEventListener("click", () => {
+  const root = document.documentElement;
+  const dark = root.dataset.theme === "dark";
+  if (dark) delete root.dataset.theme; else root.dataset.theme = "dark";
+  try { localStorage.setItem("tema", dark ? "claro" : "oscuro"); } catch (e) {}
+});
+
+// --- Menú de idiomas: abrir y cerrar ---
+const lang = barra.querySelector(".lang");
+const langBtn = barra.querySelector(".lang__btn");
+function abrirMenu(abrir) {
+  lang.classList.toggle("is-open", abrir);
+  langBtn.setAttribute("aria-expanded", abrir);
 }
+langBtn.addEventListener("click", () => abrirMenu(!lang.classList.contains("is-open")));
+document.addEventListener("click", (e) => { if (!lang.contains(e.target)) abrirMenu(false); });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") abrirMenu(false); });
 
 // =========================================================
-// 4. Cursor personalizado (solo en ordenador, con ratón)
+// 4. Traducción
+//    El español se lee del propio .html; el catalán y el inglés, de textos.js
+// =========================================================
+const TRADUCIBLES = [
+  ["data-i18n", (el, v) => { el.innerHTML = v; }, (el) => el.innerHTML],
+  ["data-i18n-tooltip", (el, v) => { el.dataset.tooltip = v; }, (el) => el.dataset.tooltip],
+  ["data-i18n-content", (el, v) => { el.setAttribute("content", v); }, (el) => el.getAttribute("content")],
+  ["data-i18n-alt", (el, v) => { el.setAttribute("alt", v); }, (el) => el.getAttribute("alt")],
+];
+
+// Guarda el texto original en español de cada elemento
+const originales = new Map();
+TRADUCIBLES.forEach(([attr, , leer]) => {
+  document.querySelectorAll(`[${attr}]`).forEach((el) => {
+    if (!originales.has(el)) originales.set(el, {});
+    originales.get(el)[attr] = leer(el);
+  });
+});
+
+function ponerIdioma(code) {
+  const dicc = (typeof TEXTOS !== "undefined" && TEXTOS[code]) || {};
+  TRADUCIBLES.forEach(([attr, escribir]) => {
+    document.querySelectorAll(`[${attr}]`).forEach((el) => {
+      const clave = el.getAttribute(attr);
+      const espanol = originales.get(el)[attr];
+      let texto = espanol;
+      if (code !== "es") {
+        if (clave in dicc) texto = dicc[clave];
+        else console.warn(`Falta la traducción "${clave}" en el idioma "${code}" (textos.js)`);
+      }
+      escribir(el, texto);
+    });
+  });
+
+  document.documentElement.lang = code;
+  langBtn.querySelector(".flag").className = `flag flag--${code}`;
+  langBtn.querySelector(".lang__code").textContent = code.toUpperCase();
+  barra.querySelectorAll(".lang__option").forEach((b) => {
+    b.setAttribute("aria-current", b.dataset.lang === code);
+  });
+  const t = TEXTOS_BARRA[code];
+  barra.querySelector(".theme-btn").setAttribute("aria-label", t.tema);
+  langBtn.setAttribute("aria-label", t.idioma);
+}
+
+barra.querySelectorAll(".lang__option").forEach((b) => {
+  b.addEventListener("click", () => {
+    ponerIdioma(b.dataset.lang);
+    try { localStorage.setItem("idioma", b.dataset.lang); } catch (e) {}
+    abrirMenu(false);
+  });
+});
+
+// Idioma inicial: el que eligió antes la visitante o, si no, el de su navegador
+function idiomaInicial() {
+  const validos = IDIOMAS.map((i) => i.code);
+  try {
+    const guardado = localStorage.getItem("idioma");
+    if (validos.includes(guardado)) return guardado;
+  } catch (e) {}
+  const delNavegador = navigator.languages || [navigator.language || ""];
+  for (const l of delNavegador) {
+    const code = l.toLowerCase().slice(0, 2);
+    if (validos.includes(code)) return code;
+  }
+  return "en";
+}
+ponerIdioma(idiomaInicial());
+
+// =========================================================
+// 5. Cursor personalizado (solo en ordenador, con ratón)
 //    - Cuadrado de color por defecto
 //    - Barra de texto encima de los textos
 //    - Etiqueta de color encima de elementos con data-tooltip="..."

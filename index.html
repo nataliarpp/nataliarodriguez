@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- CAMBIA ESTO: el título que sale en la pestaña del navegador y en Google -->
   <title>Natalia Rodríguez — Product Designer</title>
-  <meta name="description" content="Portfolio de Natalia Rodríguez, Product Designer (UX/UI).">
+  <meta name="description" content="Portfolio de Natalia Rodríguez, Product Designer (UX/UI)." data-i18n-content="meta.desc">
 
   <!-- Tipografías de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,12 @@
   <script>try{var t=localStorage.getItem("tema");if(t==="oscuro"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.dataset.theme="dark"}catch(e){}</script>
 </head>
 <body>
+  <!--
+    IDIOMAS: los textos de esta página están en español.
+    Las traducciones al catalán y al inglés están en el archivo textos.js.
+    Cada texto traducible tiene una "etiqueta", por ejemplo data-i18n="hero.titulo".
+    Si cambias un texto aquí, cambia también su traducción en textos.js (busca la misma etiqueta).
+  -->
 
   <!-- Textura de grano y cursor personalizado (no hace falta tocarlos) -->
   <div class="grain" aria-hidden="true"></div>
@@ -26,19 +32,11 @@
   <aside class="sidebar">
     <a href="#use-cases" class="sidebar__name">Natalia Rodríguez</a>
     <nav class="sidebar__nav">
-      <a href="#use-cases" class="is-active">Use cases</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#use-cases" class="is-active" data-i18n="nav.usecases">Use cases</a>
+      <a href="#experiencia" data-i18n="nav.experiencia">Experiencia</a>
+      <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
     </nav>
   </aside>
-
-  <!-- Botón de modo claro / oscuro (el destello de arriba a la derecha) -->
-  <button class="theme-toggle" type="button" aria-label="Cambiar entre modo claro y oscuro">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
-      <circle cx="12" cy="12" r="2.2"/>
-      <path d="M12 2.5v5M12 16.5v5M2.5 12h5M16.5 12h5M5.3 5.3l2.8 2.8M15.9 15.9l2.8 2.8M18.7 5.3l-2.8 2.8M8.1 15.9l-2.8 2.8"/>
-    </svg>
-  </button>
 
   <main class="content">
 
@@ -46,19 +44,17 @@
     <section id="use-cases" class="intro" data-section>
 
       <!-- CAMBIA ESTO: tu frase principal -->
-      <h1 class="hero reveal">
-        Natalia Rodríguez es una product designer que diseña experiencias claras y humanas.
-      </h1>
+      <h1 class="hero reveal" data-i18n="hero.titulo">Natalia Rodríguez es una product designer que diseña experiencias claras y humanas.</h1>
 
       <!-- CAMBIA ESTO: dónde estás ahora y dónde has estado -->
       <div class="meta reveal">
         <div>
-          <p class="meta__label">Actualmente</p>
-          <p class="meta__value">Diseñando @ Empresa<br>en Ciudad</p>
+          <p class="meta__label" data-i18n="hero.ahora.label">Actualmente</p>
+          <p class="meta__value" data-i18n="hero.ahora">Diseñando @ Empresa<br>en Ciudad</p>
         </div>
         <div>
-          <p class="meta__label">Antes</p>
-          <p class="meta__value">Diseñé @ Empresa, @ Empresa,<br>@ Empresa, y más.</p>
+          <p class="meta__label" data-i18n="hero.antes.label">Antes</p>
+          <p class="meta__value" data-i18n="hero.antes">Diseñé @ Empresa, @ Empresa,<br>@ Empresa, y más.</p>
         </div>
       </div>
 
@@ -66,7 +62,6 @@
         PROYECTOS: hay dos columnas (izquierda y derecha) para conseguir el efecto mosaico.
         Cada <a class="card"> ... </a> es un proyecto.
 
-        - Para cambiar el texto de la tarjeta: cambia "Proyecto 1" y "App móvil 2026".
         - data-tooltip="..." es la etiqueta de color que sale al pasar el ratón.
         - style="--o:1" es el orden en el móvil (donde se ve una sola columna).
         - Para poner una imagen en lugar del degradado: guarda la imagen en la carpeta
@@ -77,35 +72,35 @@
         <div class="work__col">
 
           <a class="card reveal" href="proyecto-1.html" style="--o:1">
-            <div class="cover cover--earth" style="aspect-ratio: 16 / 9" data-tooltip="Ver caso de estudio">
-              <span class="cover__title">Proyecto 1</span>
+            <div class="cover cover--earth" style="aspect-ratio: 16 / 9" data-tooltip="Ver caso de estudio" data-i18n-tooltip="card.ver">
+              <span class="cover__title" data-i18n="p1.titulo">Proyecto 1</span>
             </div>
-            <p class="card__caption">Proyecto 1 <span class="slash">/</span> <span class="muted">App móvil 2026</span></p>
+            <p class="card__caption"><span data-i18n="p1.titulo">Proyecto 1</span> <span class="slash">/</span> <span class="muted" data-i18n="p1.tipo">App móvil 2026</span></p>
           </a>
 
           <a class="card reveal" href="proyecto-1.html" style="--o:3">
-            <div class="cover cover--mint cover--dark" style="aspect-ratio: 4 / 3" data-tooltip="Ver caso de estudio">
-              <span class="cover__title">Proyecto 3</span>
+            <div class="cover cover--mint cover--dark" style="aspect-ratio: 4 / 3" data-tooltip="Ver caso de estudio" data-i18n-tooltip="card.ver">
+              <span class="cover__title" data-i18n="p3.titulo">Proyecto 3</span>
             </div>
-            <p class="card__caption">Proyecto 3 <span class="slash">/</span> <span class="muted">Web 2025</span></p>
+            <p class="card__caption"><span data-i18n="p3.titulo">Proyecto 3</span> <span class="slash">/</span> <span class="muted" data-i18n="p3.tipo">Web 2025</span></p>
           </a>
 
         </div>
         <div class="work__col">
 
           <a class="card reveal" href="proyecto-1.html" style="--o:2">
-            <div class="cover cover--sky cover--dark" style="aspect-ratio: 9 / 7" data-tooltip="Ver caso de estudio">
-              <span class="cover__title">Proyecto 2</span>
+            <div class="cover cover--sky cover--dark" style="aspect-ratio: 9 / 7" data-tooltip="Ver caso de estudio" data-i18n-tooltip="card.ver">
+              <span class="cover__title" data-i18n="p2.titulo">Proyecto 2</span>
             </div>
-            <p class="card__caption">Proyecto 2 <span class="slash">/</span> <span class="muted">Dashboard 2025</span></p>
+            <p class="card__caption"><span data-i18n="p2.titulo">Proyecto 2</span> <span class="slash">/</span> <span class="muted" data-i18n="p2.tipo">Dashboard 2025</span></p>
           </a>
 
           <!-- Proyecto que aún no tiene página: no es un enlace (div en vez de a) -->
           <div class="card reveal" style="--o:4">
-            <div class="cover cover--ocean" style="aspect-ratio: 16 / 9" data-tooltip="Próximamente">
-              <span class="cover__title">Proyecto 4</span>
+            <div class="cover cover--ocean" style="aspect-ratio: 16 / 9" data-tooltip="Próximamente" data-i18n-tooltip="card.pronto">
+              <span class="cover__title" data-i18n="p4.titulo">Proyecto 4</span>
             </div>
-            <p class="card__caption">Proyecto 4 <span class="slash">/</span> <span class="muted">Próximamente 2026</span></p>
+            <p class="card__caption"><span data-i18n="p4.titulo">Proyecto 4</span> <span class="slash">/</span> <span class="muted" data-i18n="p4.tipo">Próximamente 2026</span></p>
           </div>
 
         </div>
@@ -114,58 +109,56 @@
 
     <!-- ===================== EXPERIENCIA ===================== -->
     <section id="experiencia" class="section" data-section>
-      <p class="section__label reveal">Experiencia</p>
+      <p class="section__label reveal" data-i18n="exp.label">Experiencia</p>
       <!-- CAMBIA ESTO: tu presentación -->
-      <h2 class="section__title reveal">
-        Me encanta entender a las personas y convertir problemas complejos en productos sencillos.
-      </h2>
+      <h2 class="section__title reveal" data-i18n="exp.titulo">Me encanta entender a las personas y convertir problemas complejos en productos sencillos.</h2>
 
       <!-- CAMBIA ESTO: tu experiencia. Copia un <li> ... </li> entero para añadir una fila -->
       <ul class="xp reveal">
         <li>
-          <span class="xp__year">2024 — Hoy</span>
-          <span class="xp__what">Empresa<span>Product Designer</span></span>
+          <span class="xp__year" data-i18n="exp.1.fecha">2024 — Hoy</span>
+          <span class="xp__what"><span class="xp__place" data-i18n="exp.empresa">Empresa</span><span>Product Designer</span></span>
         </li>
         <li>
           <span class="xp__year">2022 — 2024</span>
-          <span class="xp__what">Empresa<span>UX/UI Designer</span></span>
+          <span class="xp__what"><span class="xp__place" data-i18n="exp.empresa">Empresa</span><span>UX/UI Designer</span></span>
         </li>
         <li>
           <span class="xp__year">2021</span>
-          <span class="xp__what">Empresa<span>Prácticas de diseño</span></span>
+          <span class="xp__what"><span class="xp__place" data-i18n="exp.empresa">Empresa</span><span data-i18n="exp.3.rol">Prácticas de diseño</span></span>
         </li>
         <li>
           <span class="xp__year">2017 — 2021</span>
-          <span class="xp__what">Universidad / Escuela<span>Grado en Diseño</span></span>
+          <span class="xp__what"><span class="xp__place" data-i18n="exp.4.lugar">Universidad / Escuela</span><span data-i18n="exp.4.rol">Grado en Diseño</span></span>
         </li>
       </ul>
 
       <!-- Fotos sobre ti. Para poner una foto, cambia el <div class="photo ..."> por
-           <img class="photo" src="images/foto.jpg" alt="Foto de Natalia" data-tooltip="¡Esa soy yo! :)"> -->
+           <img class="photo" src="images/foto.jpg" alt="Foto de Natalia" data-tooltip="¡Esa soy yo! :)" data-i18n-tooltip="gal.yo.tip"> -->
       <div class="gallery">
         <figure class="reveal">
-          <figcaption>01 <span class="slash">/</span> Yo</figcaption>
-          <div class="photo" style="aspect-ratio: 4 / 5; --c:#ECE7DF" data-tooltip="¡Esa soy yo! :)">Tu foto</div>
+          <figcaption>01 <span class="slash">/</span> <span data-i18n="gal.1">Yo</span></figcaption>
+          <div class="photo" style="aspect-ratio: 4 / 5; --c:#ECE7DF" data-tooltip="¡Esa soy yo! :)" data-i18n-tooltip="gal.yo.tip"><span data-i18n="gal.tufoto">Tu foto</span></div>
         </figure>
         <figure class="reveal">
-          <figcaption>02 <span class="slash">/</span> Workshops</figcaption>
-          <div class="photo" style="aspect-ratio: 3 / 2; --c:#C1D4ED" data-tooltip="Foto">Foto</div>
+          <figcaption>02 <span class="slash">/</span> <span data-i18n="gal.2">Workshops</span></figcaption>
+          <div class="photo" style="aspect-ratio: 3 / 2; --c:#C1D4ED" data-tooltip="Foto" data-i18n-tooltip="gal.foto"><span data-i18n="gal.foto">Foto</span></div>
         </figure>
         <figure class="reveal">
-          <figcaption>03 <span class="slash">/</span> Equipo</figcaption>
-          <div class="photo" style="aspect-ratio: 3 / 4; --c:#CBE1C8" data-tooltip="Foto">Foto</div>
+          <figcaption>03 <span class="slash">/</span> <span data-i18n="gal.3">Equipo</span></figcaption>
+          <div class="photo" style="aspect-ratio: 3 / 4; --c:#CBE1C8" data-tooltip="Foto" data-i18n-tooltip="gal.foto"><span data-i18n="gal.foto">Foto</span></div>
         </figure>
         <figure class="reveal">
-          <figcaption>04 <span class="slash">/</span> Fuera del trabajo</figcaption>
-          <div class="photo" style="aspect-ratio: 1 / 1; --c:#E3DED5" data-tooltip="Foto">Foto</div>
+          <figcaption>04 <span class="slash">/</span> <span data-i18n="gal.4">Fuera del trabajo</span></figcaption>
+          <div class="photo" style="aspect-ratio: 1 / 1; --c:#E3DED5" data-tooltip="Foto" data-i18n-tooltip="gal.foto"><span data-i18n="gal.foto">Foto</span></div>
         </figure>
       </div>
     </section>
 
     <!-- ===================== CONTACTO ===================== -->
     <section id="contacto" class="section contact" data-section>
-      <p class="section__label reveal">Contacto</p>
-      <h2 class="contact__title reveal">¿Creamos algo juntos?</h2>
+      <p class="section__label reveal" data-i18n="contact.label">Contacto</p>
+      <h2 class="contact__title reveal" data-i18n="contact.titulo">¿Creamos algo juntos?</h2>
 
       <!-- CAMBIA ESTO: tus datos. Pon tu enlace entre las comillas de href="..." -->
       <div class="meta meta--3 reveal">
@@ -188,6 +181,8 @@
 
   </main>
 
+  <!-- La barra de abajo (modo oscuro + idioma) la crea script.js automáticamente -->
+  <script src="textos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
