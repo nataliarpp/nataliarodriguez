@@ -213,9 +213,13 @@ button { font: inherit; color: inherit; background: none; border: 0; }
   max-width: 24ch;
 }
 
+/* About me: descripción */
+.bio { margin-top: 8px; max-width: 62ch; display: grid; gap: 18px; }
+.bio p { font-size: 21px; line-height: 1.6; color: var(--texto-2); }
+
 /* Experiencia */
 .section__lead { margin-top: 24px; max-width: 58ch; color: var(--texto-2); font-size: 18px; }
-.jobs { list-style: none; margin-top: 72px; max-width: 960px; }
+.jobs { list-style: none; margin-top: 24px; max-width: 960px; }
 .job {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -266,20 +270,14 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .extras { margin-top: 72px; max-width: 960px; }
 
 /* About me: galería de fotos en mosaico */
-.about { margin-top: 120px; }
+.about { margin-top: 96px; }
 .about .sub-label { margin-top: 0; }
-.about__title {
-  margin-top: 12px;
-  font-family: var(--serif);
-  font-size: clamp(26px, 2.4vw, 40px);
-  line-height: 1.3;
-}
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px 24px;
   align-items: start;
-  margin-top: 48px;
+  margin-top: 24px;
 }
 .gallery figcaption { color: var(--gris); margin-bottom: 14px; }
 .photo-link { display: block; }
@@ -526,7 +524,8 @@ html.has-cursor, html.has-cursor * { cursor: none !important; }
   .card { order: var(--o); }
   .card__caption { font-size: 16px; }
   .section { padding-top: 112px; }
-  .jobs { margin-top: 40px; }
+  .jobs { margin-top: 16px; }
+  .bio p { font-size: 18px; }
   .job, .edu li { grid-template-columns: 1fr; gap: 4px; }
   .job { padding: 24px 0; }
   .job__highlights { padding: 14px 16px; }

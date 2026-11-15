@@ -18,7 +18,6 @@ const TEXTOS = {
     // Página principal
     "meta.desc": "Portfoli de Natalia Rodríguez, Product Designer (UX/UI).",
     "nav.usecases": "Use cases",
-    "nav.experiencia": "Experiència",
     "nav.contacto": "Contacte",
 
     "hero.titulo": "Natalia Rodríguez és una product designer que dissenya experiències clares i humanes.",
@@ -38,9 +37,9 @@ const TEXTOS = {
     "p4.titulo": "Projecte 4",
     "p4.tipo": "Properament 2026",
 
+    "bio.1": "Treballo com a dissenyadora de producte a Blanes, Girona, amb l'objectiu de crear dissenys que simplifiquin la vida de les persones usuàries, aportant solucions creatives amb un gran valor afegit.",
+    "bio.2": "El meu enfocament es basa en la col·laboració activa: escoltar atentament les diverses perspectives i experiències, i implicar tant l'equip com els clients per aconseguir els millors resultats possibles.",
     "exp.label": "Experiència",
-    "exp.titulo": "Dissenyo producte de principi a fi, des de la recerca fins a la implementació.",
-    "exp.intro": "Treballo de prop amb clients, fundadors, customer success i equips de desenvolupament per transformar necessitats reals en experiències digitals clares i útils.",
 
     "exp.1.fecha": "Gen. 2024 — Avui",
     "exp.1.desc": "Primera i única Product Designer de l'equip: disseny de producte de principi a fi, amb la recerca com a base de cada decisió. Research de mercat i competència, validació amb clients i usuaris, i col·laboració diària amb frontend i backend.",
@@ -131,7 +130,6 @@ const TEXTOS = {
     // Página principal
     "meta.desc": "Portfolio of Natalia Rodríguez, Product Designer (UX/UI).",
     "nav.usecases": "Use cases",
-    "nav.experiencia": "Experience",
     "nav.contacto": "Contact",
 
     "hero.titulo": "Natalia Rodríguez is a product designer who creates clear, human experiences.",
@@ -151,9 +149,9 @@ const TEXTOS = {
     "p4.titulo": "Project 4",
     "p4.tipo": "Coming soon 2026",
 
+    "bio.1": "I'm a product designer based in Blanes, Girona, focused on creating designs that make users' lives simpler, with creative solutions that add real value.",
+    "bio.2": "My approach is built on active collaboration: listening carefully to different perspectives and experiences, and involving both the team and clients to achieve the best possible results.",
     "exp.label": "Experience",
-    "exp.titulo": "I design products end to end, from research to implementation.",
-    "exp.intro": "I work closely with clients, founders, customer success and development teams to turn real needs into clear, useful digital experiences.",
 
     "exp.1.fecha": "Jan 2024 — Now",
     "exp.1.desc": "First and only Product Designer on the team: end-to-end product design, with research as the foundation for every decision. Market and competitor research, validation with customers and users, and daily collaboration with frontend and backend.",
