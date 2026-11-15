@@ -12,7 +12,9 @@
   --gris: #81715D;         /* Earth: menú, etiquetas, años */
   --gris-claro: #BDB4A7;   /* Caramel: barras "/" */
   --linea: #ECE7DF;        /* Caramel muy claro: líneas separadoras */
-  --acento: #556D96;       /* Blueberry: cursor, menú activo, etiquetas. Prueba #8C9B6E (Olive) */
+  --acento: #556D96;       /* Blueberry: menú activo y enlaces */
+  --cursor: #8C9B6E;       /* Olive: cursor y etiqueta al pasar por imágenes */
+  --cursor-texto: #2C3650; /* color del texto dentro de la etiqueta */
 
   --serif: "Libre Baskerville", Georgia, serif;
   --sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -328,13 +330,13 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .cursor__shape {
   width: 12px;
   height: 12px;
-  background: var(--acento);
+  background: var(--cursor);
   transition: width .18s, height .18s;
 }
 .cursor.is-text .cursor__shape { width: 2px; height: var(--caret, 24px); }
 .cursor__label {
-  background: var(--acento);
-  color: #fff;
+  background: var(--cursor);
+  color: var(--cursor-texto);
   font: 500 16px/1 var(--sans);
   padding: 9px 13px;
   white-space: nowrap;

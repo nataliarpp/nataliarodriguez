@@ -92,6 +92,7 @@ del color (por ejemplo `#F7F5F1`) y se actualiza toda la web.
 | `script.js` | El cursor, el menú que se ilumina, el modo oscuro y las animaciones. No hace falta tocarlo. |
 
 ### Trucos rápidos
-- **Color del cursor:** en `styles.css` cambia `--acento: #556D96;` (Blueberry) por `#8C9B6E` (Olive).
+- **Color del cursor:** en `styles.css` cambia `--cursor: #8C9B6E;` (Olive) por otro color, por ejemplo `#556D96` (Blueberry).
+- **Color del menú activo:** en `styles.css`, cambia `--acento`.
 - **Etiqueta que sale al pasar el ratón:** en `index.html`, cambia el texto de `data-tooltip="..."`.
 - **Poner una imagen en una tarjeta:** súbela a la carpeta `images` y pon `<img src="images/nombre.jpg" alt="Descripción">` dentro del `<div class="cover ...">`.
