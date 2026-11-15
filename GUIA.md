@@ -107,3 +107,8 @@ del color (por ejemplo `#F7F5F1`) y se actualiza toda la web.
   Si se te olvida alguna, en ese idioma se verá el texto en español.
 - La primera vez que alguien entra, la web se muestra en el idioma de su navegador
   (y en inglés si su navegador está en otro idioma). Si elige otro idioma, se recuerda.
+
+### Vista previa de las webs (al pasar el ratón por un enlace de empresa)
+Guarda una captura de cada web en la carpeta `images/previews/` con estos nombres:
+`piperai.jpg`, `aircall.jpg`, `antaiventures.jpg`, `jardinynatura.jpg`, `nuclio.jpg`.
+Mejor en horizontal (por ejemplo 1280 × 800). Mientras falte una captura, se muestra una tarjeta con el nombre de la web.

@@ -165,7 +165,66 @@ function idiomaInicial() {
 ponerIdioma(idiomaInicial());
 
 // =========================================================
-// 5. Cursor personalizado (solo en ordenador, con ratón)
+// 5. Vista previa de las webs al pasar el ratón por un enlace
+//    Para poner la captura de una web, guárdala en images/previews/
+//    con el nombre que aparece abajo (por ejemplo images/previews/piperai.jpg).
+//    Si no hay captura, se muestra una tarjeta con el nombre de la web.
+// =========================================================
+const PREVIEWS = {
+  "piperai.com": "piperai.jpg",
+  "aircall.io": "aircall.jpg",
+  "antaiventures.com": "antaiventures.jpg",
+  "jardinynatura.com": "jardinynatura.jpg",
+  "nuclio.school": "nuclio.jpg",
+};
+
+if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  const preview = document.createElement("div");
+  preview.className = "preview";
+  preview.setAttribute("aria-hidden", "true");
+  document.body.appendChild(preview);
+  let actual = null;
+
+  function mostrarPreview(link) {
+    const dominio = link.hostname.replace(/^www\./, "");
+    const archivo = PREVIEWS[dominio];
+    if (!archivo) return;
+    actual = link;
+    const tarjeta = `<div class="preview__fallback"><span class="preview__name">${link.textContent}</span><span class="preview__url">${dominio}</span></div>`;
+    preview.innerHTML = "";
+    const img = new Image();
+    img.alt = "";
+    img.onload = () => { if (actual === link) { preview.innerHTML = ""; preview.appendChild(img); } };
+    img.src = "images/previews/" + archivo;
+    if (!img.complete || !img.naturalWidth) preview.innerHTML = tarjeta;
+    else preview.appendChild(img);
+    colocarPreview(link);
+    preview.classList.add("is-visible");
+  }
+
+  function colocarPreview(link) {
+    const r = link.getBoundingClientRect();
+    const w = preview.offsetWidth, h = preview.offsetHeight;
+    let x = Math.min(r.left, window.innerWidth - w - 16);
+    let y = r.bottom + 12;
+    if (y + h > window.innerHeight - 16) y = r.top - h - 12;
+    preview.style.left = Math.max(16, x) + "px";
+    preview.style.top = y + "px";
+  }
+
+  document.addEventListener("mouseover", (e) => {
+    const link = e.target.closest("a.inline-link");
+    if (link && link !== actual) mostrarPreview(link);
+  });
+  document.addEventListener("mouseout", (e) => {
+    const link = e.target.closest("a.inline-link");
+    if (link && !link.contains(e.relatedTarget)) { actual = null; preview.classList.remove("is-visible"); }
+  });
+  window.addEventListener("scroll", () => { actual = null; preview.classList.remove("is-visible"); }, { passive: true });
+}
+
+// =========================================================
+// 6. Cursor personalizado (solo en ordenador, con ratón)
 //    - Cuadrado de color por defecto
 //    - Barra de texto encima de los textos
 //    - Etiqueta de color encima de elementos con data-tooltip="..."
