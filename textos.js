@@ -23,9 +23,9 @@ const TEXTOS = {
 
     "hero.titulo": "Natalia Rodríguez és una product designer que dissenya experiències clares i humanes.",
     "hero.ahora.label": "Actualment",
-    "hero.ahora": "Dissenyant @ Empresa<br>a Ciutat",
+    "hero.ahora": "Dissenyant @&nbsp;Piper AI, <br>an Aircall company",
     "hero.antes.label": "Abans",
-    "hero.antes": "Vaig dissenyar @ Empresa, @ Empresa,<br>@ Empresa, i més.",
+    "hero.antes": "Dissenyadora @&nbsp;Antai Ventures, mentora @&nbsp;Nuclio <br>i dissenyadora gràfica @&nbsp;Jardín&nbsp;y&nbsp;Natura.",
 
     "card.ver": "Veure cas d'estudi",
     "card.pronto": "Properament",
@@ -136,9 +136,9 @@ const TEXTOS = {
 
     "hero.titulo": "Natalia Rodríguez is a product designer who creates clear, human experiences.",
     "hero.ahora.label": "Currently",
-    "hero.ahora": "Designing @ Company<br>in City",
+    "hero.ahora": "Designing @&nbsp;Piper AI, <br>an Aircall company",
     "hero.antes.label": "Previously",
-    "hero.antes": "Designed @ Company, @ Company,<br>@ Company, and more.",
+    "hero.antes": "Designer @&nbsp;Antai Ventures, mentor @&nbsp;Nuclio <br>and graphic designer @&nbsp;Jardín&nbsp;y&nbsp;Natura.",
 
     "card.ver": "View case study",
     "card.pronto": "Coming soon",

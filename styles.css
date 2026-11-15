@@ -519,6 +519,7 @@ html.has-cursor, html.has-cursor * { cursor: none !important; }
   .footer { padding-bottom: 96px; }
   .intro { padding-top: 40px; }
   .meta, .meta--3 { grid-template-columns: 1fr; gap: 20px; margin-top: 40px; }
+  .intro .meta__value br { display: none; }
   .work { display: flex; flex-direction: column; gap: 48px; margin-top: 56px; }
   .work__col { display: contents; }
   .card { order: var(--o); }
