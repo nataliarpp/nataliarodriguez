@@ -12,7 +12,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
 
 // =========================================================
-// 2. Menú lateral: marca en naranja la sección que estás viendo
+// 2. Menú lateral: marca en color la sección que estás viendo
 // =========================================================
 const navLinks = [...document.querySelectorAll(".sidebar__nav a")];
 const sections = [...document.querySelectorAll("[data-section]")];
@@ -51,9 +51,9 @@ if (toggle) {
 
 // =========================================================
 // 4. Cursor personalizado (solo en ordenador, con ratón)
-//    - Cuadrado naranja por defecto
+//    - Cuadrado de color por defecto
 //    - Barra de texto encima de los textos
-//    - Etiqueta naranja encima de elementos con data-tooltip="..."
+//    - Etiqueta de color encima de elementos con data-tooltip="..."
 // =========================================================
 const cursor = document.querySelector(".cursor");
 const hasMouse = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
