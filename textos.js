@@ -17,7 +17,8 @@ const TEXTOS = {
   ca: {
     // Página principal
     "meta.desc": "Portfoli de Natalia Rodríguez, Product Designer (UX/UI).",
-    "nav.usecases": "Use cases",
+    "nav.usecases": "Casos d'ús",
+    "nav.about": "Sobre mi",
     "nav.contacto": "Contacte",
 
     "hero.titulo": "Natalia Rodríguez és una product designer que dissenya experiències clares i humanes.",
@@ -102,7 +103,7 @@ const TEXTOS = {
     "caso.rol": "El meu rol",
     "caso.imagen": "Imatge",
     "caso.imagengrande": "Imatge gran",
-    "caso.volver": "← Tornar a Use cases",
+    "caso.volver": "← Tornar a Casos d'ús",
 
     // Proyecto 1
     "caso1.pagina": "Projecte 1 — Natalia Rodríguez",
@@ -130,6 +131,7 @@ const TEXTOS = {
     // Página principal
     "meta.desc": "Portfolio of Natalia Rodríguez, Product Designer (UX/UI).",
     "nav.usecases": "Use cases",
+    "nav.about": "About me",
     "nav.contacto": "Contact",
 
     "hero.titulo": "Natalia Rodríguez is a product designer who creates clear, human experiences.",

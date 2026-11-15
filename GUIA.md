@@ -86,7 +86,7 @@ del color (por ejemplo `#F7F5F1`) y se actualiza toda la web.
 
 | Archivo | Qué contiene |
 |---|---|
-| `index.html` | La página principal: **Use cases**, **About me** (descripción, experiencia y fotos) y **Contacto**. |
+| `index.html` | La página principal: **Casos de uso**, **Sobre mí** (descripción, experiencia y fotos) y **Contacto**. |
 | `proyecto-1.html` | La plantilla de un caso de estudio. Para otro proyecto, duplícala (`proyecto-2.html`) y enlázala desde la tarjeta en `index.html`. |
 | `styles.css` | El diseño. Arriba del todo están **tus colores** (Neutral, Earth, Caramel, Olive, Mint, Sky, Ocean y Blueberry). |
 | `textos.js` | Las **traducciones** al catalán y al inglés. |
