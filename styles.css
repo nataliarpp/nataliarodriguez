@@ -16,7 +16,7 @@
   --panel-hover: #F4F1EB;  /* botón de la barra al pasar el ratón */
   --acento: #556D96;       /* Blueberry: menú activo y enlaces */
   --cursor: #8C9B6E;       /* Olive: cursor y etiqueta al pasar por imágenes */
-  --cursor-texto: #2C3650; /* color del texto dentro de la etiqueta */
+  --cursor-texto: #FFFEFB; /* Neutral: color del texto dentro de la etiqueta */
 
   --serif: "Libre Baskerville", Georgia, serif;
   --sans: "Inter", system-ui, -apple-system, sans-serif;
@@ -468,10 +468,9 @@ img.photo { display: block; height: auto; }
 .cursor.is-text .cursor__shape { width: 2px; height: var(--caret, 24px); }
 .cursor__label {
   max-width: 300px;
-  line-height: 1.35;
   background: var(--cursor);
   color: var(--cursor-texto);
-  font: 500 16px/1 var(--sans);
+  font: 400 15px/1.35 var(--sans);
   padding: 9px 13px;
   opacity: 0;
   transform: scale(.85);
