@@ -1,9 +1,9 @@
 // =========================================================
 // 0. Huecos de imagen o vídeo (<div class="media" data-media="images/piper/portada">)
-//    Busca el archivo con distintas extensiones y muestra el primero que exista.
+//    Busca el archivo con distintas extensiones (.jpg, .png, .webp, .svg, .mp4…) y muestra el primero que exista.
 //    Así solo hay que subir el archivo con el nombre correcto: no hace falta tocar el código.
 // =========================================================
-const EXTENSIONES = ["jpg", "png", "webp", "mp4", "gif", "jpeg", "webm"];
+const EXTENSIONES = ["jpg", "png", "webp", "svg", "mp4", "gif", "jpeg", "webm"];
 
 function cargarMedia(el, i = 0) {
   if (i >= EXTENSIONES.length) return;              // no hay archivo: se queda el hueco
