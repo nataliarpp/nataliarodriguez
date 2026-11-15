@@ -165,10 +165,12 @@ function idiomaInicial() {
 ponerIdioma(idiomaInicial());
 
 // =========================================================
-// 5. Vista previa de las webs al pasar el ratón por un enlace
-//    Para poner la captura de una web, guárdala en images/previews/
-//    con el nombre que aparece abajo (por ejemplo images/previews/piperai.jpg).
-//    Si no hay captura, se muestra una tarjeta con el nombre de la web.
+// 5. Vista previa de las webs al pasar el ratón por un enlace de empresa
+//    La captura de cada web la genera automáticamente el servicio gratuito
+//    de capturas de WordPress (mshots), desde el navegador de quien visita.
+//    Si prefieres una captura propia, guárdala en images/previews/ con el
+//    nombre indicado abajo (por ejemplo images/previews/piperai.jpg):
+//    tendrá prioridad sobre la automática.
 // =========================================================
 const PREVIEWS = {
   "piperai.com": "piperai.jpg",
@@ -183,21 +185,53 @@ if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
   preview.className = "preview";
   preview.setAttribute("aria-hidden", "true");
   document.body.appendChild(preview);
+
+  const capturas = {};   // url de la web -> imagen ya cargada
   let actual = null;
 
-  function mostrarPreview(link) {
-    const dominio = link.hostname.replace(/^www\./, "");
-    const archivo = PREVIEWS[dominio];
-    if (!archivo) return;
-    actual = link;
-    const tarjeta = `<div class="preview__fallback"><span class="preview__name">${link.textContent}</span><span class="preview__url">${dominio}</span></div>`;
-    preview.innerHTML = "";
+  const urlAutomatica = (url, intento) =>
+    "https://s.wordpress.com/mshots/v1/" + encodeURIComponent(url) + "?w=1280&h=800" + (intento ? "&r=" + intento : "");
+
+  // Carga la captura: primero la propia (si existe) y si no, la automática.
+  // El servicio automático devuelve una imagen pequeña de "cargando" la primera vez;
+  // en ese caso se vuelve a intentar unos segundos después.
+  function cargarCaptura(link) {
+    const url = link.href;
+    if (capturas[url]) return;
+    capturas[url] = "cargando";
+    const archivo = PREVIEWS[link.hostname.replace(/^www\./, "")];
+    const propia = new Image();
+    propia.onload = () => listo(url, propia);
+    propia.onerror = () => automatica(url, 0);
+    propia.src = "images/previews/" + archivo;
+  }
+  function automatica(url, intento) {
     const img = new Image();
-    img.alt = "";
-    img.onload = () => { if (actual === link) { preview.innerHTML = ""; preview.appendChild(img); } };
-    img.src = "images/previews/" + archivo;
-    if (!img.complete || !img.naturalWidth) preview.innerHTML = tarjeta;
-    else preview.appendChild(img);
+    img.onload = () => {
+      if (img.naturalWidth >= 1000) listo(url, img);
+      else if (intento < 6) setTimeout(() => automatica(url, intento + 1), 3000);
+    };
+    img.src = urlAutomatica(url, intento);
+  }
+  function listo(url, img) {
+    capturas[url] = img;
+    if (actual && actual.href === url) pintar(img);
+  }
+  function pintar(img) {
+    const copia = img.cloneNode();
+    copia.alt = "";
+    preview.innerHTML = "";
+    preview.appendChild(copia);
+    preview.classList.remove("is-loading");
+  }
+
+  function mostrarPreview(link) {
+    if (!PREVIEWS[link.hostname.replace(/^www\./, "")]) return;
+    actual = link;
+    cargarCaptura(link);
+    const img = capturas[link.href];
+    if (img instanceof Image) pintar(img);
+    else { preview.innerHTML = ""; preview.classList.add("is-loading"); }
     colocarPreview(link);
     preview.classList.add("is-visible");
   }
@@ -221,6 +255,11 @@ if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     if (link && !link.contains(e.relatedTarget)) { actual = null; preview.classList.remove("is-visible"); }
   });
   window.addEventListener("scroll", () => { actual = null; preview.classList.remove("is-visible"); }, { passive: true });
+
+  // Pide las capturas por adelantado, para que estén listas al pasar el ratón
+  window.addEventListener("load", () => {
+    setTimeout(() => document.querySelectorAll("a.inline-link").forEach(cargarCaptura), 800);
+  });
 }
 
 // =========================================================

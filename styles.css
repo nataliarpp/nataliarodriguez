@@ -487,22 +487,13 @@ img.photo { display: block; height: auto; }
 }
 .preview.is-visible { opacity: 1; transform: none; }
 .preview img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-/* Tarjeta que sale mientras no haya captura de la web */
-.preview__fallback {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 4px;
-  padding: 20px;
-  background:
-    radial-gradient(60% 70% at 20% 20%, #FFFEFB 0%, transparent 60%),
-    radial-gradient(70% 80% at 85% 85%, #CBE1C8 0%, transparent 65%),
-    #E7E1D8;
-  color: #2B3442;
+/* Mientras se carga la captura: recuadro con un brillo suave */
+.preview.is-loading {
+  background: linear-gradient(100deg, var(--panel) 30%, var(--panel-hover) 50%, var(--panel) 70%);
+  background-size: 200% 100%;
+  animation: brillo 1.2s linear infinite;
 }
-.preview__name { font-family: var(--serif); font-size: 26px; line-height: 1.2; }
-.preview__url { font-size: 14px; color: #5E6577; }
+@keyframes brillo { to { background-position: -200% 0; } }
 
 /* ===== Cursor personalizado ===== */
 .cursor {

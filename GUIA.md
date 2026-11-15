@@ -109,6 +109,7 @@ del color (por ejemplo `#F7F5F1`) y se actualiza toda la web.
   (y en inglés si su navegador está en otro idioma). Si elige otro idioma, se recuerda.
 
 ### Vista previa de las webs (al pasar el ratón por un enlace de empresa)
-Guarda una captura de cada web en la carpeta `images/previews/` con estos nombres:
-`piperai.jpg`, `aircall.jpg`, `antaiventures.jpg`, `jardinynatura.jpg`, `nuclio.jpg`.
-Mejor en horizontal (por ejemplo 1280 × 800). Mientras falte una captura, se muestra una tarjeta con el nombre de la web.
+Las capturas se generan solas con el servicio gratuito de capturas de WordPress.
+Si alguna no te gusta, guarda tu propia captura en `images/previews/` con estos nombres
+y tendrá prioridad: `piperai.jpg`, `aircall.jpg`, `antaiventures.jpg`, `jardinynatura.jpg`, `nuclio.jpg`
+(mejor en horizontal, por ejemplo 1280 × 800).
