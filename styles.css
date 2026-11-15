@@ -195,6 +195,25 @@ button { font: inherit; color: inherit; background: none; border: 0; }
     radial-gradient(70% 80% at 15% 85%, #8C9B6E 0%, transparent 65%),
     #CBE1C8;
 }
+.cover--caramel {
+  background:
+    radial-gradient(60% 70% at 20% 20%, #FFFEFB 0%, transparent 60%),
+    radial-gradient(70% 80% at 85% 85%, #BDB4A7 0%, transparent 65%),
+    #E7E1D8;
+}
+/* Etiqueta "En construcción" sobre una portada */
+.cover__badge {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--acento);
+  font-size: 16px;
+  font-weight: 500;
+}
+.cover__badge i { width: 12px; height: 12px; background: var(--acento); }
 .cover--ocean {
   background:
     radial-gradient(60% 70% at 15% 15%, #C1D4ED 0%, transparent 60%),
@@ -217,57 +236,45 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .bio { margin-top: 8px; max-width: 62ch; display: grid; gap: 18px; }
 .bio p { font-size: 21px; line-height: 1.6; color: var(--texto-2); }
 
-/* Experiencia */
-.section__lead { margin-top: 24px; max-width: 58ch; color: var(--texto-2); font-size: 18px; }
-.jobs { list-style: none; margin-top: 24px; max-width: 960px; }
-.job {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 24px;
-  padding: 32px 0;
-  border-top: 1px solid var(--linea);
-}
-.job:last-child { border-bottom: 1px solid var(--linea); }
-.job__date { color: var(--gris); }
-.job__company { font-size: 20px; font-weight: 500; line-height: 1.4; }
-.job__note { color: var(--gris); font-weight: 400; }
-.job__role { color: var(--gris); }
-.job__desc { margin-top: 12px; color: var(--texto-2); max-width: 62ch; }
-.job__highlights {
-  list-style: none;
-  margin-top: 18px;
-  padding: 16px 20px;
-  display: grid;
-  gap: 8px;
-  background: color-mix(in srgb, var(--acento) 7%, transparent);
-  border-left: 2px solid var(--acento);
-}
-.job__highlights li { position: relative; padding-left: 18px; color: var(--texto); }
-.job__highlights li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: .65em;
-  width: 6px;
-  height: 6px;
-  background: var(--acento);
-}
-.job__highlights strong { font-weight: 600; color: var(--acento); }
-
+/* Experiencia y formación: filas "Puesto, Empresa ........ fechas" */
 .sub-label { margin-top: 96px; color: var(--gris); font-size: 17px; font-weight: 400; }
-.edu { list-style: none; margin-top: 24px; max-width: 960px; }
-.edu li {
-  display: grid;
-  grid-template-columns: 200px 1fr;
+.rows { list-style: none; margin-top: 16px; max-width: 960px; }
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   gap: 24px;
   padding: 18px 0;
   border-top: 1px solid var(--linea);
 }
-.edu li:last-child { border-bottom: 1px solid var(--linea); }
-.edu__date { color: var(--gris); }
-.edu__what { display: flex; flex-direction: column; }
-.edu__place { color: var(--gris); }
-.extras { margin-top: 72px; max-width: 960px; }
+.row:last-child { border-bottom: 1px solid var(--linea); }
+.row__title { color: var(--texto); }
+.row__comma { color: var(--gris); }
+.row__sub { color: var(--gris); }
+.row__date { color: var(--gris); white-space: nowrap; text-align: right; }
+
+/* Herramientas (iconos) e idiomas */
+.extras {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 48px;
+  margin-top: 96px;
+  max-width: 960px;
+}
+.extras .sub-label { margin: 0 0 16px; }
+.tools { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.tool {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  background: #FFFFFF;
+  border: 1px solid var(--linea);
+  border-radius: 14px;
+  transition: transform .25s ease;
+}
+.tool:hover { transform: translateY(-3px); }
+.tool svg { width: 26px; height: 26px; }
 
 /* About me: galería de fotos en mosaico */
 .about { margin-top: 96px; }
@@ -536,11 +543,10 @@ html.has-cursor, html.has-cursor * { cursor: none !important; }
   .card { order: var(--o); }
   .card__caption { font-size: 16px; }
   .section { padding-top: 112px; }
-  .jobs { margin-top: 16px; }
+  .row { flex-direction: column; gap: 2px; padding: 14px 0; }
+  .row__date { text-align: left; }
+  .extras { grid-template-columns: 1fr; gap: 40px; }
   .bio p { font-size: 18px; }
-  .job, .edu li { grid-template-columns: 1fr; gap: 4px; }
-  .job { padding: 24px 0; }
-  .job__highlights { padding: 14px 16px; }
   .sub-label { margin-top: 64px; }
   .extras { margin-top: 48px; }
   .gallery { gap: 32px 16px; margin-top: 32px; }
