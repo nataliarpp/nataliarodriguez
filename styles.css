@@ -6,7 +6,7 @@
    Neutral #FFFEFB · Earth #81715D · Caramel #BDB4A7 · Olive #8C9B6E
    Mint #CBE1C8 · Sky #C1D4ED · Ocean #6789CC · Blueberry #556D96 */
 :root {
-  --fondo: #F9F8F8;        /* color de fondo (con el grano queda #F4F3F3) */
+  --fondo: #F7F6F6;        /* color de fondo (con el grano queda #F4F3F3) */
   --texto: #2C3650;        /* Blueberry muy oscuro: texto principal */
   --texto-2: #5E6577;      /* texto secundario */
   --gris: #81715D;         /* Earth: menú, etiquetas, años */
@@ -66,9 +66,9 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .grain {
   position: fixed;
   inset: 0;
-  z-index: 900;
+  z-index: 0;
   pointer-events: none;
-  opacity: .11;
+  opacity: .07;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5 0 0 0 -0.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 :root[data-theme="dark"] .grain { filter: invert(1); opacity: .12; }
@@ -117,6 +117,8 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 
 /* ===== Contenido ===== */
 .content {
+  position: relative;
+  z-index: 1;
   margin: 0 var(--lateral);
   max-width: 1320px;
 }
@@ -240,7 +242,7 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .cover .cover__badge--light { color: #FFFEFB; }
 .cover .cover__badge--light i { background: #FFFEFB; }
 .cover__contain { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain !important; }
-.cover--logo img { position: static; width: 34%; height: auto; filter: drop-shadow(0 2px 12px rgba(43, 52, 66, .18)); transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.cover--logo img { position: static; width: 34%; height: auto; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
 .card:hover .cover--logo img { transform: scale(1.04); }
 
 /* Etiqueta "En construcción" sobre una portada */
