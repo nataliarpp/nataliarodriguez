@@ -572,6 +572,18 @@ img.photo { display: block; height: auto; }
 
 .pc-stats + .pc-narrow { margin-top: 24px; }
 
+/* Pasos numerados (Cómo lo haría hoy) */
+.pc-steps { list-style: none; counter-reset: paso; margin-top: 24px; display: grid; gap: 20px; }
+.pc-steps > li { counter-increment: paso; display: grid; grid-template-columns: 36px 1fr; color: var(--texto-2); line-height: 1.7; }
+.pc-steps > li::before { content: counter(paso, decimal-leading-zero); color: var(--etiqueta); }
+.pc-steps > li > * { grid-column: 2; }
+.pc-steps .pc-bullets { margin-top: 14px; }
+
+/* Brushstrokes: rejilla de proyectos */
+.bs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px 24px; align-items: start; }
+.bs-item__title { margin-top: 16px; font-family: var(--serif); font-weight: 400; font-size: 22px; color: var(--titular); }
+.bs-item__text { margin-top: 6px; color: var(--texto-2); font-size: 15px; }
+
 /* Tarjetas blancas (branding) */
 .pc-cards { display: grid; gap: 24px; margin-top: 24px; }
 .pc-cards--2 { grid-template-columns: 1fr 1fr; }
@@ -617,7 +629,7 @@ img.photo { display: block; height: auto; }
 @media (max-width: 800px) {
   .pcase { padding-top: 32px; }
   .case-nav { display: none; }
-  .pc-split, .pc-cards--2, .pc-stats, .pc-link, .pc-tasks, .pc-grid--2, .pc-grid--3 { grid-template-columns: 1fr; }
+  .pc-split, .pc-cards--2, .pc-stats, .pc-link, .pc-tasks, .pc-grid--2, .pc-grid--3, .bs-grid { grid-template-columns: 1fr; }
   .pc-split { gap: 40px; margin-top: 48px; }
   .pc-section { padding-top: 96px; }
   .pc-lead { font-size: 18px; }

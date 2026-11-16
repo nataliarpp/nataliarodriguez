@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Textos en español aquí; catalán e inglés en textos.js (etiquetas "bs."). -->
+  <title data-i18n="bs.pagina">Brushstrokes — Natalia Rodríguez</title>
+  <meta name="description" content="Pinceladas de proyectos de diseño gráfico e ilustración de Natalia Rodríguez." data-i18n-content="bs.desc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>try{var t=localStorage.getItem("tema");if(t==="oscuro"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.dataset.theme="dark"}catch(e){}</script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__shape"></span><span class="cursor__label"></span></div>
+
+  <aside class="sidebar">
+    <a href="index.html#use-cases" class="sidebar__name crumb">
+      <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+      <span data-i18n="nav.usecases">Casos de uso</span> <span class="slash">/</span> <b>Brushstrokes</b>
+    </a>
+    <nav class="sidebar__nav case-nav">
+      <a href="#resumen" class="is-active" data-i18n="bs.n.resumen">Resumen</a>
+      <a href="#packaging" data-i18n="bs.n.packaging">Diseño gráfico y packaging</a>
+      <a href="#ilus" data-i18n="bs.n.ilus">Ilustración</a>
+    </nav>
+  </aside>
+
+  <main class="content pcase">
+
+    <!-- ===================== RESUMEN ===================== -->
+    <section id="resumen" class="pc-narrow" data-section>
+      <h1 class="pc-title reveal">Brushstrokes</h1>
+      <p class="pc-lead reveal" data-i18n="bs.intro">Esto no es un caso de estudio: es una pincelada de proyectos que hice como diseñadora gráfica e ilustradora y que forman parte de mi trayectoria.</p>
+    </section>
+
+    <!-- ===================== HERRAMIENTAS DE DISEÑO ===================== -->
+    <section id="toolkit" class="pc-section pc-narrow">
+      <h2 class="pc-h2 reveal" data-i18n="bs.h.toolkit">Herramientas de diseño</h2>
+      <ul class="tools pc-toolkit reveal">
+        <li class="tool" role="img" aria-label="Illustrator" data-tooltip="Illustrator"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#330000"/><text x="12" y="16.2" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="11" fill="#FF9A00">Ai</text></svg></li>
+        <li class="tool" role="img" aria-label="Photoshop" data-tooltip="Photoshop"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#001E36"/><text x="12" y="16.2" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="11" fill="#31A8FF">Ps</text></svg></li>
+        <li class="tool" role="img" aria-label="InDesign" data-tooltip="InDesign"><svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#49021F"/><text x="12" y="16.2" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="11" fill="#FF3366">Id</text></svg></li>
+        <li class="tool" role="img" aria-label="Procreate" data-tooltip="Procreate"><svg viewBox="0 0 24 24"><defs><linearGradient id="procreate-g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#F6A04D"/><stop offset=".5" stop-color="#E9E9EF"/><stop offset="1" stop-color="#7FB6FF"/></linearGradient></defs><rect width="24" height="24" rx="5" fill="#1C1C1E"/><path d="M17.6 5.2a1.3 1.3 0 0 1 1.9 1.8l-6.9 7.3-1.8-1.7z" fill="url(#procreate-g)"/><path d="M10.2 13.2l1.8 1.7c-.5 2-2.1 3.6-5.3 3.8.2-3 1.6-5.1 3.5-5.5z" fill="#E9E9EF"/></svg></li>
+      </ul>
+    </section>
+
+    <!-- ===================== DISEÑO GRÁFICO Y PACKAGING =====================
+         Cada <article> es un proyecto. Sus imágenes van en images/brushstrokes/ -->
+    <section id="packaging" class="pc-section" data-section>
+      <div class="pc-narrow"><h2 class="pc-h2 reveal" data-i18n="bs.h.packaging">Diseño gráfico y packaging</h2></div>
+      <div class="pc-wide bs-grid">
+        <article class="bs-item reveal">
+          <div class="media" data-media="images/brushstrokes/semillas" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Sobres de semillas</b>images/brushstrokes/semillas.jpg · .png · .mp4</span></div>
+          <h3 class="bs-item__title" data-i18n="bs.semillas">Sobres de semillas</h3>
+          <p class="bs-item__text" data-i18n="bs.semillas.t">Diseño de sobres de semillas ilustrados en papel kraft para una empresa de jardinería, The Garden People.</p>
+        </article>
+        <article class="bs-item reveal">
+          <div class="media" data-media="images/brushstrokes/colors" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Colors</b>images/brushstrokes/colors.jpg · .png · .mp4</span></div>
+          <h3 class="bs-item__title" data-i18n="bs.colors">Colors</h3>
+          <p class="bs-item__text" data-i18n="bs.colors.t">Packaging ilustrado de cartón para mangueras de riego de colores, para una empresa de jardinería.</p>
+        </article>
+        <article class="bs-item reveal">
+          <div class="media" data-media="images/brushstrokes/cane" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Cane</b>images/brushstrokes/cane.jpg · .png · .mp4</span></div>
+          <h3 class="bs-item__title" data-i18n="bs.cane">Cane</h3>
+          <p class="bs-item__text" data-i18n="bs.cane.t">Creación de marca y packaging para una empresa ficticia de snacks para perros (proyecto de estudios en ELISAVA).</p>
+        </article>
+        <article class="bs-item reveal">
+          <div class="media" data-media="images/brushstrokes/rega" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Rega</b>images/brushstrokes/rega.jpg · .png · .mp4</span></div>
+          <h3 class="bs-item__title" data-i18n="bs.rega">Rega</h3>
+          <p class="bs-item__text" data-i18n="bs.rega.t">Blíster de plástico para el programador de riego de una empresa de jardinería.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== ILUSTRACIÓN ===================== -->
+    <section id="ilus" class="pc-section pc-last" data-section>
+      <div class="pc-narrow"><h2 class="pc-h2 reveal" data-i18n="bs.h.ilus">Ilustración</h2></div>
+      <div class="pc-wide bs-grid">
+        <article class="bs-item reveal">
+          <div class="media" data-media="images/brushstrokes/calendarios" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Calendarios de siembra</b>images/brushstrokes/calendarios.jpg · .png · .mp4</span></div>
+          <h3 class="bs-item__title" data-i18n="bs.calendarios">Calendarios de siembra</h3>
+          <p class="bs-item__text" data-i18n="bs.calendarios.t">Calendarios ilustrados de siembra y plantación para The Garden People.</p>
+        </article>
+        <article class="bs-item reveal">
+          <div class="media" data-media="images/brushstrokes/quotes" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Quotes</b>images/brushstrokes/quotes.jpg · .png · .mp4</span></div>
+          <h3 class="bs-item__title" data-i18n="bs.quotes">Quotes</h3>
+          <p class="bs-item__text" data-i18n="bs.quotes.t">Frases para el contenido de Instagram de The Garden People.</p>
+        </article>
+        <article class="bs-item reveal">
+          <div class="media" data-media="images/brushstrokes/invernaderos" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Invernaderos</b>images/brushstrokes/invernaderos.jpg · .png · .mp4</span></div>
+          <h3 class="bs-item__title" data-i18n="bs.invernaderos">Invernaderos</h3>
+          <p class="bs-item__text" data-i18n="bs.invernaderos.t">Manuales de instrucciones de productos de jardinería para The Garden People.</p>
+        </article>
+        <article class="bs-item reveal">
+          <div class="media" data-media="images/brushstrokes/riego" style="aspect-ratio: 4 / 3"><span class="media__hint"><b>Programadores de riego</b>images/brushstrokes/riego.jpg · .png · .mp4</span></div>
+          <h3 class="bs-item__title" data-i18n="bs.riego">Programadores de riego</h3>
+          <p class="bs-item__text" data-i18n="bs.riego.t">Manuales de instrucciones de productos de jardinería para The Garden People.</p>
+        </article>
+      </div>
+      <div class="pc-narrow"><a class="back-link" href="index.html#use-cases" data-i18n="bs.volver">← Volver a Casos de uso</a></div>
+    </section>
+
+  </main>
+
+  <script src="textos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
