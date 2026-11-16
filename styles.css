@@ -608,7 +608,23 @@ img.photo { display: block; height: auto; }
 .pc-steps > li > * { grid-column: 2; }
 .pc-steps .pc-bullets { margin-top: 14px; }
 
-/* Brushstrokes: rejilla de proyectos */
+/* Brushstrokes: proyectos con filas de imágenes a la misma altura */
+.bs-project + .bs-project { margin-top: 64px; }
+.bs-project .pc-h3 { margin-top: 0; }
+.bs-project .pc-text { margin-top: 6px; }
+.bs-rows { display: grid; gap: 16px; margin-top: 24px; }
+.bs-row { display: flex; gap: 16px; }
+.bs-cell, .bs-stack { min-width: 0; }
+.bs-stack { display: flex; flex-direction: column; gap: 16px; }
+.bs-row img { display: block; width: 100%; height: auto; border-radius: 14px; background: #FFFFFF; }
+@media (max-width: 800px) {
+  .bs-row { gap: 8px; }
+  .bs-stack { gap: 8px; }
+  .bs-rows { gap: 8px; }
+  .bs-row img { border-radius: 8px; }
+}
+
+/* Brushstrokes: rejilla de proyectos (antigua) */
 .bs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px 24px; align-items: start; }
 .bs-main {
   aspect-ratio: 4 / 3;
