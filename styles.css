@@ -488,6 +488,8 @@ img.photo { display: block; height: auto; }
 .pc-meta dd { color: var(--texto-2); }
 .pc-section { padding-top: 140px; }
 .pc-gap { margin-top: 72px; }
+.pc-section--near { padding-top: 72px; }
+.pc-note { font-size: 14px; color: var(--etiqueta); }
 .pc-h2 {
   font-family: var(--serif);
   font-weight: 400;
