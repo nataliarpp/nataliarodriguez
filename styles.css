@@ -223,6 +223,14 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .cover__hover { opacity: 0; transition: opacity .45s ease; background: var(--bg); object-fit: contain !important; }
 .card:hover .cover__hover.is-playing { opacity: 1; }
 
+/* The Garden People: verde agua + melocotón */
+.cover--tgp {
+  --tgp-mint: #D3ECE8;
+  --tgp-peach: #FCE4D4;
+  background:
+    radial-gradient(60% 80% at 10% 15%, #E6F5F2 0%, transparent 60%),
+    linear-gradient(105deg, var(--tgp-mint) 0%, var(--tgp-mint) 45%, var(--tgp-peach) 100%);
+}
 .cover--blueolive {
   background:
     radial-gradient(70% 90% at 15% 15%, #6789CC 0%, transparent 60%),
