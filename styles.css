@@ -225,6 +225,13 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .cover__hover { opacity: 0; transition: opacity .45s ease; background: var(--bg); object-fit: contain !important; }
 .card:hover .cover__hover.is-playing { opacity: 1; }
 
+/* The Garden People: foto de plantas + logo blanco */
+.cover--plants { --bg: #4E5A48; }
+.cover--plants .cover__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 40% 45%; }
+.cover--plants::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30, 38, 30, .25), rgba(30, 38, 30, .38)); }
+.cover--plants .cover__logo { position: relative; z-index: 1; width: 34%; height: auto; filter: drop-shadow(0 2px 14px rgba(0, 0, 0, .25)); }
+.cover--plants.cover--logo img.cover__bg { width: 100%; height: 100%; }
+
 /* The Garden People: verde agua + melocotón */
 .cover--tgp {
   --tgp-mint: #D3ECE8;
