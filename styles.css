@@ -223,6 +223,18 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .cover__hover { opacity: 0; transition: opacity .45s ease; background: var(--bg); object-fit: contain !important; }
 .card:hover .cover__hover.is-playing { opacity: 1; }
 
+.cover--blueolive {
+  background:
+    radial-gradient(70% 90% at 15% 15%, #6789CC 0%, transparent 60%),
+    radial-gradient(70% 90% at 85% 90%, #8C9B6E 0%, transparent 65%),
+    linear-gradient(120deg, #556D96, #8C9B6E);
+}
+.cover .cover__badge--light { color: #FFFEFB; }
+.cover .cover__badge--light i { background: #FFFEFB; }
+.cover__contain { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain !important; }
+.cover--logo img { position: static; width: 34%; height: auto; filter: drop-shadow(0 2px 12px rgba(43, 52, 66, .18)); transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.card:hover .cover--logo img { transform: scale(1.04); }
+
 /* Etiqueta "En construcción" sobre una portada */
 .cover__badge {
   position: absolute;
