@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    CASO DE ESTUDIO: KIDOVO
+    - Los textos en español están aquí; el catalán y el inglés, en textos.js (etiquetas "kd.").
+    - IMÁGENES Y VÍDEOS: súbelos a la carpeta images/kidovo/ (o mándamelos) y los coloco.
+  -->
+  <title data-i18n="kd.pagina">Kidovo — Natalia Rodríguez</title>
+  <meta name="description" content="Caso de estudio de Kidovo, por Natalia Rodríguez." data-i18n-content="kd.desc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>try{var t=localStorage.getItem("tema");if(t==="oscuro"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.dataset.theme="dark"}catch(e){}</script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__shape"></span><span class="cursor__label"></span></div>
+
+  <!-- ===== MENÚ LATERAL: índice del caso de estudio ===== -->
+  <aside class="sidebar">
+    <a href="index.html#use-cases" class="sidebar__name crumb">
+      <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+      <span data-i18n="nav.usecases">Casos de uso</span> <span class="slash">/</span> <b>Kidovo</b>
+    </a>
+    <nav class="sidebar__nav case-nav">
+      <a href="#resumen" class="is-active" data-i18n="kd.n.resumen">Resumen</a>
+      <a href="#contexto" data-i18n="kd.n.contexto">Contexto</a>
+      <a href="#rol" data-i18n="kd.n.rol">Mi rol</a>
+      <a href="#problema" data-i18n="kd.n.problema">Problema</a>
+      <a href="#proceso" data-i18n="kd.n.proceso">Proceso</a>
+      <a href="#ab" data-i18n="kd.n.ab">Test A/B</a>
+      <a href="#adq" data-i18n="kd.n.adq">Test de adquisición</a>
+      <a href="#solucion" data-i18n="kd.n.solucion">Solución</a>
+      <a href="#hoy" data-i18n="kd.n.hoy">Hoy en día</a>
+    </nav>
+  </aside>
+
+  <main class="content pcase">
+
+    <!-- ===================== RESUMEN ===================== -->
+    <section id="resumen" data-section>
+      <div class="pc-narrow">
+        <h1 class="pc-title reveal">Kidovo</h1>
+        <p class="pc-lead reveal" data-i18n="kd.intro">Kidovo es una plataforma de salud mental para adolescentes, jóvenes y sus familias. Está pensada como un «espacio seguro»: un chat con psicólogos que ofrecen apoyo y acompañamiento en el bienestar emocional.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media" data-media="images/kidovo/portada" style="aspect-ratio: 16 / 8.5"><span class="media__hint"><b>Portada</b>images/kidovo/portada.jpg · .png · .mp4</span></div></div>
+
+      <div class="pc-wide pc-split">
+        <dl class="pc-meta reveal">
+          <div><dt data-i18n="kd.m.sede">Sede</dt><dd data-i18n="kd.m.sede.v">Barcelona, España</dd></div>
+          <div><dt data-i18n="kd.m.fundacion">Fundación</dt><dd>2023</dd></div>
+          <div><dt data-i18n="kd.m.tipo">Tipo de empresa</dt><dd>Startup</dd></div>
+          <div><dt data-i18n="kd.m.sector">Sector</dt><dd data-i18n="kd.m.sector.v">Salud mental</dd></div>
+        </dl>
+        <div>
+          <div id="contexto" data-section>
+            <h2 class="pc-h2 reveal" data-i18n="kd.h.contexto">Contexto</h2>
+            <p class="pc-text reveal" data-i18n="kd.contexto1">La startup había empezado a construir un primer MVP, pero necesitaba aterrizar la idea y el concepto y, sobre todo, validar las funcionalidades por las que quería apostar antes de lanzar el producto.</p>
+            <p class="pc-text reveal" data-i18n="kd.contexto2">Desde Antai Ventures propusimos hacer un test A/B para comprobar qué funcionalidades preferían los usuarios y cómo debían ser para resolver el problema principal de su público objetivo.</p>
+          </div>
+          <div id="rol" class="pc-gap" data-section>
+            <h2 class="pc-h2 reveal" data-i18n="kd.h.rol">Mi rol y tareas</h2>
+            <p class="pc-text reveal" data-i18n="kd.rol">Lideré el diseño de producto de un test A/B y de un test de adquisición de usuarios para validar funcionalidades y planes de pago con usuarios reales. Trabajé junto a la persona que lideraba la parte de negocio de la oportunidad y los fundadores de la empresa. Mis tareas fueron:</p>
+            <ol class="pc-tasks reveal">
+            <li><span data-i18n="kd.t1">Investigar y analizar las funcionalidades de la competencia.</span></li>
+            <li><span data-i18n="kd.t2">Estructurar datos para entender las necesidades, comportamientos y preferencias de los usuarios.</span></li>
+            <li><span data-i18n="kd.t3">Entrevistas a usuarios.</span></li>
+            <li><span data-i18n="kd.t4">Insights de clientes e ideación.</span></li>
+            <li><span data-i18n="kd.t5">Construcción de la visión del proyecto.</span></li>
+            <li><span data-i18n="kd.t6">Prototipo para el test A/B.</span></li>
+            <li><span data-i18n="kd.t7">Diseños para los tests de adquisición de usuarios.</span></li>
+            <li><span data-i18n="kd.t8">Aplicar cambios a partir de los resultados de las entrevistas y los tests.</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HERRAMIENTAS DE DISEÑO =====================
+         Copia un <li class="tool"> de index.html para añadir otra herramienta -->
+    <section id="toolkit" class="pc-section pc-narrow">
+      <h2 class="pc-h2 reveal" data-i18n="kd.h.toolkit">Herramientas de diseño</h2>
+      <ul class="tools pc-toolkit reveal">
+        <li class="tool" role="img" aria-label="Figma" data-tooltip="Figma"><svg viewBox="0 0 38 57"><path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" fill="#1ABCFE"/><path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z" fill="#0ACF83"/><path d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z" fill="#FF7262"/><path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" fill="#F24E1E"/><path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="#A259FF"/></svg></li>
+        <li class="tool" role="img" aria-label="FigJam" data-tooltip="FigJam"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="5" fill="#FFFFFF" stroke="#E6E6EA"/><rect x="4.5" y="4.5" width="9" height="9" rx="1.2" fill="#FFC943"/><circle cx="16.5" cy="16.5" r="3.8" fill="#9747FF"/><path d="M5 18.5l3-4 3 4z" fill="#14AE5C"/><path d="M16 5.5h3.5V9" fill="none" stroke="#0D99FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+        <li class="tool" role="img" aria-label="Notion" data-tooltip="Notion"><svg viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" fill="#000"/></svg></li>
+      </ul>
+    </section>
+
+    <!-- ===================== PROBLEMA ===================== -->
+    <section id="problema" class="pc-section pc-narrow" data-section>
+      <h2 class="pc-h2 reveal" data-i18n="kd.h.problema">Problema</h2>
+      <p class="pc-text reveal" data-i18n="kd.problema1">El principal problema que aborda Kidovo son las altas tasas de trastornos y patologías mentales entre adolescentes y jóvenes en España, a menudo relacionadas con la depresión, la ansiedad o la soledad.</p>
+      <p class="pc-text reveal" data-i18n="kd.problema2">Tanto las familias como los propios adolescentes y jóvenes buscan ayuda en la sanidad pública, que hoy está desbordada y no da abasto tras la pandemia. La alternativa es la atención privada, que está fragmentada, es cara y poco práctica.</p>
+      <div class="pc-stats pc-stats--1 reveal">
+        <div><strong data-i18n="kd.s.problema">+70 %</strong><span data-i18n="kd.s.problema.t">de los adolescentes con ansiedad y depresión no han encontrado un apoyo adecuado y se enfrentan solos al problema.</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESO ===================== -->
+    <section id="proceso" class="pc-section pc-narrow" data-section>
+      <h2 class="pc-h2 reveal" data-i18n="kd.h.proceso">Proceso de diseño</h2>
+      <h3 class="pc-h3 reveal" data-i18n="kd.h.entrevistas">Entrevistas sobre el problema</h3>
+      <p class="pc-text reveal" data-i18n="kd.proc1">Tras la investigación y una primera ronda amplia de entrevistas para validar el problema, surgieron muchas dudas sobre qué funcionalidades debía ofrecer la plataforma y cómo debían ser los escenarios más importantes.</p>
+      <p class="pc-text reveal" data-i18n="kd.proc2">Para resolverlas, diseñamos un prototipo rápido que mostraba los valores de marca, el modelo de negocio de la empresa y las funcionalidades con las que queríamos resolver el problema principal del usuario.</p>
+      <p class="pc-text reveal" data-i18n="kd.proc3">Con él hicimos un test A/B con distintos públicos objetivo, porque esa era una de las grandes incógnitas:</p>
+      <blockquote class="pc-quote reveal"><p data-i18n="kd.pregunta">¿A quién debía dirigirse la aplicación? ¿A los padres, a los familiares de los adolescentes, a los propios adolescentes o quizá a los centros educativos?</p></blockquote>
+    </section>
+
+    <!-- ===================== TEST A/B ===================== -->
+    <section id="ab" class="pc-section" data-section>
+      <div class="pc-narrow">
+        <h2 class="pc-h2 reveal" data-i18n="kd.h.ab">Test A/B con usuarios</h2>
+        <p class="pc-text reveal" data-i18n="kd.ab1">En el test presentamos un onboarding sólido que explicaba la plataforma a fondo. Pedimos a los usuarios que lo leyeran con atención, que intentaran entender y empatizar con lo que proponíamos y que nos dieran su punto de vista y su experiencia.</p>
+        <p class="pc-text reveal" data-i18n="kd.ab2">Después pedíamos unos datos básicos de registro y hablábamos de las funcionalidades que podía incluir la plataforma: cada usuario elegía las que encajaban con sus necesidades y preferencias. También hablamos de los planes de pago y de la posibilidad de personalizarlos y adaptarlos a cada situación económica.</p>
+        <p class="pc-text reveal" data-i18n="kd.ab3">Al terminar esa conversación sobre planes, funcionalidades y metodologías, empezábamos otra: invitábamos al usuario a explorar el prototipo para que su experiencia y su feedback nos ayudaran a mejorar los escenarios en los que teníamos dudas.</p>
+        <p class="pc-text reveal" data-i18n="kd.ab4">En esa parte, tras completar el onboarding, el registro y la personalización de su plan, el usuario entraba en la app y probaba cada funcionalidad: actividades para trabajar por su cuenta, módulos educativos, un chat en directo con profesionales de la salud mental, un calendario para agendar videollamadas con el psicólogo y un test para elegir al profesional que mejor encajaba con su perfil.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media" data-media="images/kidovo/prototipo" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Prototipo del test A/B</b>images/kidovo/prototipo.jpg · .png · .mp4</span></div></div>
+    </section>
+
+    <!-- ===================== TEST DE ADQUISICIÓN ===================== -->
+    <section id="adq" class="pc-section" data-section>
+      <div class="pc-narrow">
+        <h2 class="pc-h2 reveal" data-i18n="kd.h.adq">Test de adquisición de usuarios</h2>
+        <p class="pc-text reveal" data-i18n="kd.adq1">Para confirmar que los adolescentes eran de verdad nuestro público principal, sin centrarnos al principio en sus familias ni en los centros educativos, decidimos hacer un test de adquisición de usuarios y obtener así resultados de negocio reales.</p>
+        <p class="pc-text reveal" data-i18n="kd.adq2">Promocionamos el producto en Instagram y TikTok con una prueba gratuita de 30 días para medir la conversión y la monetización.</p>
+      </div>
+      <div class="pc-wide pc-stats reveal">
+        <div><strong data-i18n="kd.s1">+50</strong><span data-i18n="kd.s1.t">usuarios de prueba en una semana</span></div>
+        <div><strong data-i18n="kd.s2">~10</strong><span data-i18n="kd.s2.t">empezaron a pagar entre el 2.º y el 3.er día de uso</span></div>
+        <div><strong data-i18n="kd.s3">100 %</strong><span data-i18n="kd.s3.t">de los usuarios llegaron desde TikTok</span></div>
+      </div>
+      <div class="pc-narrow"><p class="pc-text reveal" data-i18n="kd.adq3">Como todos los usuarios llegaban desde TikTok, decidimos seguir anunciando Kidovo solo en esa plataforma. Publicamos más anuncios y dimos a conocer a nuestros profesionales y psicólogos y los planes personalizados que ofrecíamos.</p></div>
+      <div class="pc-wide reveal"><div class="media" data-media="images/kidovo/anuncios" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Anuncios en TikTok e Instagram</b>images/kidovo/anuncios.jpg · .png · .mp4</span></div></div>
+    </section>
+
+    <!-- ===================== SOLUCIÓN ===================== -->
+    <section id="solucion" class="pc-section" data-section>
+      <div class="pc-narrow">
+        <h2 class="pc-h2 reveal" data-i18n="kd.h.solucion">Solución</h2>
+        <p class="pc-text reveal" data-i18n="kd.sol1">Al terminar las entrevistas quedó claro que nuestro público principal eran, sin ninguna duda, los adolescentes. El test de adquisición de usuarios nos ayudó a confirmarlo.</p>
+        <p class="pc-text reveal" data-i18n="kd.sol2">Tras una investigación extensa y testear el prototipo en entrevistas sobre el problema, la solución que ofrece Kidovo es:</p>
+        <p class="pc-text pc-strong reveal" data-i18n="kd.sol3">Una plataforma integral con un chat online sincronizado con WhatsApp, que conecta a nuestros profesionales de la salud mental y a un equipo humano de apoyo con los adolescentes para ofrecerles acompañamiento ilimitado.</p>
+        <h3 class="pc-h3 reveal" data-i18n="kd.h.jovenes">Para los adolescentes</h3>
+        <ul class="pc-bullets reveal">
+          <li><span data-i18n="kd.j1">Asignación del psicólogo que mejor encaja con sus necesidades.</span></li>
+          <li><span data-i18n="kd.j2">Chat, notas de voz y vídeos ilimitados con el psicólogo.</span></li>
+          <li><span data-i18n="kd.j3">Ejercicios validados científicamente.</span></li>
+          <li><span data-i18n="kd.j4">Sesiones de terapia complementarias por videollamada con el psicólogo.</span></li>
+        </ul>
+        <p class="pc-text reveal" data-i18n="kd.sol4">Aunque nuestro público principal son los jóvenes, muchos son menores de edad y es imprescindible tener en cuenta a sus tutores legales y familiares. Por eso, a los padres les ofrecemos:</p>
+        <h3 class="pc-h3 reveal" data-i18n="kd.h.familias">Para las familias</h3>
+        <ul class="pc-bullets reveal">
+          <li><span data-i18n="kd.f1">Recursos y guías prácticas para saber cómo apoyar cuando haga falta.</span></li>
+          <li><span data-i18n="kd.f2">Seguimiento mensual del progreso, siempre respetando la privacidad.</span></li>
+        </ul>
+        <p class="pc-text reveal" data-i18n="kd.sol5">Así, las familias pueden ver la evolución sin invadir el desarrollo ni la privacidad de su hijo o hija.</p>
+      </div>
+      <div class="pc-wide reveal"><div class="media" data-media="images/kidovo/solucion" style="aspect-ratio: 16 / 10"><span class="media__hint"><b>Solución</b>images/kidovo/solucion.jpg · .png · .mp4</span></div></div>
+    </section>
+
+    <!-- ===================== HOY EN DÍA ===================== -->
+    <section id="hoy" class="pc-section pc-narrow pc-last" data-section>
+      <h2 class="pc-h2 reveal" data-i18n="kd.h.hoy">Hoy en día</h2>
+      <p class="pc-text reveal" data-i18n="kd.hoy1">Cuando trabajé con Kidovo, la empresa aún no estaba constituida. Por eso no incluyo datos ni información de negocio para explicar este proyecto.</p>
+      <p class="pc-text reveal" data-i18n="kd.hoy2">En noviembre de 2023, Kidovo ya no era el nombre de la startup: hicieron un rebranding fantástico, muy llamativo y pensado para conectar con su público. En ese momento estaban levantando su primera ronda de inversión.</p>
+      <p class="pc-text reveal" data-i18n="kd.hoy3">Aprovecho para dar las gracias por haber formado parte del proceso de creación de este proyecto tan bonito. Gracias de nuevo a los fundadores y al equipo de Antai Ventures.</p>
+      <a class="back-link" href="index.html#use-cases" data-i18n="kd.volver">← Volver a Casos de uso</a>
+    </section>
+
+  </main>
+
+  <script src="textos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
