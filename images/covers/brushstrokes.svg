@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <style>
+    .stroke path { stroke-dasharray: 1600; stroke-dashoffset: 1600; animation: paint 7s cubic-bezier(.6,.05,.3,1) infinite; }
+    .stroke path:nth-child(odd) { animation-delay: .08s; }
+    .title { animation: fade 7s ease infinite; }
+    @keyframes paint { 0% { stroke-dashoffset: 1600; opacity: 1; } 28%, 86% { stroke-dashoffset: 0; opacity: 1; } 96%, 100% { stroke-dashoffset: 0; opacity: 0; } }
+    @keyframes fade { 0%, 12% { opacity: 0; } 30%, 86% { opacity: 1; } 96%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .stroke path, .title { animation: none; stroke-dashoffset: 0; } }
+  </style>
+  <defs>
+    <filter id="brush" x="-10%" y="-30%" width="120%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.09" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="3"/>
+      <feColorMatrix values="0 0 0 0 0.45  0 0 0 0 0.38  0 0 0 0 0.3  0 0 0 0.10 0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="#EDE4D6"/>
+  <rect width="1600" height="900" filter="url(#paper)"/>
+  <g class="stroke" filter="url(#brush)" stroke-linecap="round" fill="none">
+    <path d="M200 560 C 520 420, 900 640, 1390 380" stroke="#8C9B6E" stroke-width="190" opacity=".9"/>
+    <path d="M242 583 C 520 443, 900 663, 1415 399" stroke="#6F7D55" stroke-width="11.2" opacity="0.34"/><path d="M202 512 C 520 372, 900 592, 1357 342" stroke="#7E8C62" stroke-width="3.6" opacity="0.16"/><path d="M195 568 C 520 428, 900 648, 1350 387" stroke="#A9B78A" stroke-width="9.3" opacity="0.12"/><path d="M165 630 C 520 490, 900 710, 1398 436" stroke="#6F7D55" stroke-width="7.3" opacity="0.33"/><path d="M235 489 C 520 349, 900 569, 1436 323" stroke="#A9B78A" stroke-width="3.0" opacity="0.36"/><path d="M209 497 C 520 357, 900 577, 1405 329" stroke="#A9B78A" stroke-width="4.8" opacity="0.21"/><path d="M183 504 C 520 364, 900 584, 1370 335" stroke="#B9C59B" stroke-width="13.4" opacity="0.31"/><path d="M240 497 C 520 357, 900 577, 1394 329" stroke="#7E8C62" stroke-width="4.6" opacity="0.14"/><path d="M240 578 C 520 438, 900 658, 1383 395" stroke="#7E8C62" stroke-width="10.8" opacity="0.14"/><path d="M178 525 C 520 385, 900 605, 1433 352" stroke="#6F7D55" stroke-width="8.3" opacity="0.32"/><path d="M190 645 C 520 505, 900 725, 1394 448" stroke="#B9C59B" stroke-width="6.9" opacity="0.23"/><path d="M163 467 C 520 327, 900 547, 1357 305" stroke="#A9B78A" stroke-width="3.5" opacity="0.17"/><path d="M235 621 C 520 481, 900 701, 1342 429" stroke="#7E8C62" stroke-width="8.1" opacity="0.26"/><path d="M198 607 C 520 467, 900 687, 1438 418" stroke="#6F7D55" stroke-width="11.8" opacity="0.36"/><path d="M187 505 C 520 365, 900 585, 1432 336" stroke="#A9B78A" stroke-width="8.6" opacity="0.22"/><path d="M238 569 C 520 429, 900 649, 1399 387" stroke="#A9B78A" stroke-width="6.4" opacity="0.21"/><path d="M159 602 C 520 462, 900 682, 1396 414" stroke="#6F7D55" stroke-width="6.4" opacity="0.26"/><path d="M241 640 C 520 500, 900 720, 1380 444" stroke="#7E8C62" stroke-width="3.4" opacity="0.33"/><path d="M238 545 C 520 405, 900 625, 1367 368" stroke="#6F7D55" stroke-width="3.6" opacity="0.38"/><path d="M219 504 C 520 364, 900 584, 1417 335" stroke="#A9B78A" stroke-width="13.8" opacity="0.28"/><path d="M182 485 C 520 345, 900 565, 1380 320" stroke="#B9C59B" stroke-width="7.8" opacity="0.16"/><path d="M256 655 C 520 515, 900 735, 1406 456" stroke="#B9C59B" stroke-width="12.4" opacity="0.39"/><path d="M162 525 C 520 385, 900 605, 1420 352" stroke="#A9B78A" stroke-width="6.0" opacity="0.25"/><path d="M170 566 C 520 426, 900 646, 1384 385" stroke="#7E8C62" stroke-width="5.0" opacity="0.38"/><path d="M236 563 C 520 423, 900 643, 1415 382" stroke="#6F7D55" stroke-width="9.0" opacity="0.26"/><path d="M212 597 C 520 457, 900 677, 1404 410" stroke="#7E8C62" stroke-width="10.3" opacity="0.33"/>
+  </g>
+  <g class="title"><text x="800" y="505" text-anchor="middle" font-family="'Libre Baskerville', Georgia, 'Times New Roman', serif" font-size="150" fill="#2B3442" letter-spacing="-3">Brushstrokes</text>
+  <text x="800" y="600" text-anchor="middle" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="34" fill="#2B3442" opacity=".75" letter-spacing="6">PACKAGING · ILUSTRACIÓN</text></g>
+</svg>

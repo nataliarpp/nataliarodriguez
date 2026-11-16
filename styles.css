@@ -209,6 +209,20 @@ button { font: inherit; color: inherit; background: none; border: 0; }
     radial-gradient(70% 80% at 85% 85%, #BDB4A7 0%, transparent 65%),
     #E7E1D8;
 }
+/* Portadas con imagen del proyecto */
+.cover--img { background: var(--bg, #EEE); }
+.cover--img img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.card:hover .cover--img img { transform: scale(1.03); }
+.cover--phones { display: flex; justify-content: center; align-items: center; gap: 0; }
+.cover--phones img { position: static; width: auto; height: 104%; object-fit: contain; margin: 0 -1px; }
+.cover--dark-bg .cover__badge { color: #FFFEFB; background: rgba(6, 26, 43, .55); padding: 4px 10px; backdrop-filter: blur(6px); }
+.cover--dark-bg .cover__badge i { background: #CBE1C8; }
+
+.cover video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cover--video .cover__badge { color: #2B3442; background: rgba(255, 254, 251, .8); padding: 4px 10px; backdrop-filter: blur(6px); }
+.cover__hover { opacity: 0; transition: opacity .45s ease; background: var(--bg); object-fit: contain !important; }
+.card:hover .cover__hover.is-playing { opacity: 1; }
+
 /* Etiqueta "En construcción" sobre una portada */
 .cover__badge {
   position: absolute;
@@ -584,6 +598,25 @@ img.photo { display: block; height: auto; }
 
 /* Brushstrokes: rejilla de proyectos */
 .bs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px 24px; align-items: start; }
+.bs-main {
+  aspect-ratio: 4 / 3;
+  background: #EFEAE2;
+  border-radius: 14px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.bs-main img { width: 100%; height: 100%; object-fit: contain; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.bs-item:hover .bs-main img { transform: scale(1.03); }
+.bs-thumbs { display: grid; grid-template-columns: repeat(var(--n), 1fr); gap: 8px; margin-top: 8px; }
+.bs-thumbs img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #EFEAE2;
+}
 .bs-item__title { margin-top: 16px; font-family: var(--serif); font-weight: 400; font-size: 22px; color: var(--titular); }
 .bs-item__text { margin-top: 6px; color: var(--texto-2); font-size: 15px; }
 

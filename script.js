@@ -46,6 +46,23 @@ if (medias.length) {
 }
 
 // =========================================================
+// Portadas: vídeo que se reproduce al pasar el ratón (solo en ordenador)
+// =========================================================
+if (window.matchMedia("(hover: hover)").matches) {
+  document.querySelectorAll(".card").forEach((card) => {
+    const v = card.querySelector("video.cover__hover");
+    if (!v) return;
+    card.addEventListener("mouseenter", () => {
+      v.play().then(() => v.classList.add("is-playing")).catch(() => {});
+    });
+    card.addEventListener("mouseleave", () => {
+      v.classList.remove("is-playing");
+      setTimeout(() => { v.pause(); v.currentTime = 0; }, 450);
+    });
+  });
+}
+
+// =========================================================
 // 1. Aparecer suavemente al hacer scroll
 // =========================================================
 const revealObserver = new IntersectionObserver((entries) => {
