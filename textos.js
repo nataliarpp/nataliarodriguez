@@ -487,6 +487,11 @@ const TEXTOS = {
     "pa.res2": "Adquisició per part d'Aircall el 2026, una empresa amb més de 23.000 clients a més de 100 països. L'equip de Piper s'integra a Aircall.",
     "pa.h.aprendi": "El que vaig aprendre",
     "pa.aprendi": "Dissenyar per a la personalització em va ensenyar que no es tracta d'afegir opcions, sinó d'entendre per què cada equip treballa com treballa i donar-li el control just perquè el producte s'hi adapti, i no al revés.",
+    "pa.h.prensa": "L'adquisició, a la premsa",
+    "pa.prensa1": "«Aircall adquireix Piper AI per convertir les converses amb clients en accions de vendes».",
+    "pa.prensa2": "«Aircall adquireix Piper AI per automatitzar les actualitzacions del CRM i els seguiments de vendes».",
+    "pa.leer": "Llegir article ↗",
+    "pa.anuncio": "Llegir l'anunci ↗",
     "pa.volver": "← Tornar a Casos d'ús",
   },
 
@@ -966,6 +971,11 @@ const TEXTOS = {
     "pa.res2": "Acquired by Aircall in 2026, a company with 23,000+ customers in 100+ countries. The Piper team joins Aircall.",
     "pa.h.aprendi": "What I learned",
     "pa.aprendi": "Designing for customization taught me it's not about adding options, but about understanding why each team works the way it does and giving them just the right control so the product adapts to them, not the other way around.",
+    "pa.h.prensa": "The acquisition in the press",
+    "pa.prensa1": "“Aircall acquires Piper AI to turn customer conversations into revenue action.”",
+    "pa.prensa2": "“Aircall acquires Piper AI to automate CRM updates and sales follow-ups.”",
+    "pa.leer": "Read article ↗",
+    "pa.anuncio": "Read the announcement ↗",
     "pa.volver": "← Back to Use cases",
   },
 };
