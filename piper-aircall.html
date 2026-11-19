@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CASO DE ESTUDIO: PIPER AI × AIRCALL. Textos en español aquí; catalán e inglés en textos.js (etiquetas "pa."). Imágenes y vídeos en images/piper-aircall/ -->
+  <title data-i18n="pa.pagina">Piper AI × Aircall — Natalia Rodríguez</title>
+  <meta name="description" content="Caso de estudio de Piper AI × Aircall, por Natalia Rodríguez." data-i18n-content="pa.desc">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>try{var t=localStorage.getItem("tema");if(t==="oscuro"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.dataset.theme="dark"}catch(e){}</script>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__shape"></span><span class="cursor__label"></span></div>
+
+  <aside class="sidebar">
+    <a href="index.html#use-cases" class="sidebar__name crumb">
+      <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 8H3M7 4L3 8l4 4"/></svg>
+      <span data-i18n="nav.usecases">Casos de uso</span> <span class="slash">/</span> <b>Piper AI × Aircall</b>
+    </a>
+    <nav class="sidebar__nav case-nav">
+      <a href="#resumen" class="is-active" data-i18n="pa.n.resumen">Resumen</a>
+      <a href="#contexto" data-i18n="pa.n.contexto">Contexto</a>
+      <a href="#antes" data-i18n="pa.n.antes">Antes y después</a>
+      <a href="#personalizacion" data-i18n="pa.n.personalizacion">Personalización</a>
+      <a href="#escritorio" data-i18n="pa.n.escritorio">App de escritorio</a>
+      <a href="#plataforma" data-i18n="pa.n.plataforma">La plataforma</a>
+      <a href="#proceso" data-i18n="pa.n.proceso">Cómo lo diseñamos</a>
+      <a href="#resultado" data-i18n="pa.n.resultado">Resultado</a>
+    </nav>
+  </aside>
+
+  <main class="content pcase">
+
+    <!-- ===================== RESUMEN ===================== -->
+    <section id="resumen" data-section>
+      <div class="pc-narrow">
+        <p class="pc-kicker reveal"><span class="pc-badge"><i></i><span data-i18n="pa.badge">En construcción</span></span></p>
+        <h1 class="pc-title reveal">Piper AI × Aircall</h1>
+        <p class="pc-lead reveal" data-i18n="pa.intro">En 2023 diseñé desde cero el MVP de Piper: una herramienta que transcribía las llamadas de venta y rellenaba el CRM por los comerciales. Tres años después, Piper se ha convertido en una plataforma de revenue intelligence con agentes de IA, y en 2026 la adquirió Aircall. Este proyecto cuenta ese camino: cómo pasamos de un producto igual para todos a uno que cada equipo adapta a su forma de vender.</p>
+      </div>
+      <figure class="pc-wide reveal"><video class="pc-shot" src="images/piper-aircall/cover-agentes.mp4" style="aspect-ratio:16 / 9" muted loop autoplay playsinline preload="metadata"></video></figure>
+
+      <div class="pc-wide pc-split">
+        <dl class="pc-meta reveal">
+          <div><dt data-i18n="pa.m.empresa">Empresa</dt><dd>Piper AI, an Aircall company</dd></div>
+          <div><dt data-i18n="pa.m.sede">Sede</dt><dd data-i18n="pa.m.sede.v">Barcelona, España</dd></div>
+          <div><dt data-i18n="pa.m.rol">Mi rol</dt><dd data-i18n="pa.m.rol.v">Product Designer (UX/UI), primera y única diseñadora del equipo</dd></div>
+          <div><dt data-i18n="pa.m.periodo">Periodo</dt><dd data-i18n="pa.m.periodo.v">Ene. 2024 — Hoy</dd></div>
+          <div><dt data-i18n="pa.m.sector">Sector</dt><dd data-i18n="pa.m.sector.v">Revenue intelligence e IA para ventas</dd></div>
+          <div><dt data-i18n="pa.m.adq">Adquisición</dt><dd data-i18n="pa.m.adq.v">Aircall, marzo de 2026</dd></div>
+        </dl>
+        <div id="contexto" data-section>
+          <h2 class="pc-h2 reveal" data-i18n="pa.h.contexto">Contexto</h2>
+          <p class="pc-text reveal" data-i18n="pa.contexto1">El MVP de 2023 resolvía un problema muy concreto: los comerciales perdían horas pasando notas al CRM. Funcionó, pero al crecer descubrimos algo clave: cada equipo de ventas trabaja de una forma distinta. No se prepara igual una demo que una renovación, un SDR no necesita los mismos datos que un Account Executive, y cada empresa tiene su propio CRM, sus campos y su manera de hablar con los clientes.</p>
+          <p class="pc-text pc-strong reveal" data-i18n="pa.contexto2">Un producto cerrado nos obligaba a elegir por ellos. Así que tomamos una decisión de producto: que cada equipo pudiera configurar Piper a su medida.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HERRAMIENTAS ===================== -->
+    <section id="toolkit" class="pc-section pc-narrow">
+      <h2 class="pc-h2 reveal" data-i18n="pa.h.toolkit">Herramientas de diseño</h2>
+      <ul class="tools pc-toolkit reveal">
+        <li class="tool" role="img" aria-label="Figma" data-tooltip="Figma"><svg viewBox="0 0 38 57"><path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" fill="#1ABCFE"/><path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z" fill="#0ACF83"/><path d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z" fill="#FF7262"/><path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" fill="#F24E1E"/><path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" fill="#A259FF"/></svg></li>
+        <li class="tool" role="img" aria-label="FigJam" data-tooltip="FigJam"><img src="images/tools/figjam.png" alt="" width="26" height="26"></li>
+        <li class="tool" role="img" aria-label="Claude" data-tooltip="Claude"><svg viewBox="0 0 24 24"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z" fill="#D97757"/></svg></li>
+        <li class="tool" role="img" aria-label="Lovable" data-tooltip="Lovable"><img src="images/tools/lovable.png" alt="" width="26" height="26"></li>
+        <li class="tool" role="img" aria-label="Notion" data-tooltip="Notion"><svg viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" fill="#000"/></svg></li>
+      </ul>
+    </section>
+
+    <!-- ===================== ANTES Y DESPUÉS ===================== -->
+    <section id="antes" class="pc-section" data-section>
+      <div class="pc-narrow"><h2 class="pc-h2 reveal" data-i18n="pa.h.antes">El antes y el después</h2></div>
+      <div class="pc-wide reveal"><table class="pc-ba">
+        <thead><tr><th></th><th data-i18n="pa.t.col1">2023 · MVP</th><th class="pc-ba__now" data-i18n="pa.t.col2">Hoy · Piper AI × Aircall</th></tr></thead>
+        <tbody><tr><th scope="row" data-i18n="pa.t.r1">Qué era</th><td data-i18n="pa.t.r1a">Asistente que transcribe y resume llamadas</td><td class="pc-ba__now" data-i18n="pa.t.r1b">Plataforma de revenue intelligence con agentes de IA</td></tr><tr><th scope="row" data-i18n="pa.t.r2">Cómo se graba</th><td data-i18n="pa.t.r2a">Un bot que entra en la videollamada</td><td class="pc-ba__now" data-i18n="pa.t.r2b">El bot o la app de escritorio, que detecta la conversación y la graba</td></tr><tr><th scope="row" data-i18n="pa.t.r3">Canales</th><td data-i18n="pa.t.r3a">Videollamadas</td><td class="pc-ba__now" data-i18n="pa.t.r3b">Llamadas, videollamadas, email, SMS, WhatsApp y actividad de campo</td></tr><tr><th scope="row" data-i18n="pa.t.r4">Datos</th><td data-i18n="pa.t.r4a">Campos fijos para todos</td><td class="pc-ba__now" data-i18n="pa.t.r4b">Cada equipo decide qué datos se extraen y dónde se muestran</td></tr><tr><th scope="row" data-i18n="pa.t.r5">Seguimiento</th><td data-i18n="pa.t.r5a">Email de seguimiento al final</td><td class="pc-ba__now" data-i18n="pa.t.r5b">Agentes que actúan antes, durante y después de cada reunión</td></tr><tr><th scope="row" data-i18n="pa.t.r6">Experiencia</th><td data-i18n="pa.t.r6a">Igual para todos los usuarios</td><td class="pc-ba__now" data-i18n="pa.t.r6b">Personalizable desde Settings</td></tr></tbody>
+      </table></div>
+    </section>
+
+    <!-- ===================== PERSONALIZACIÓN ===================== -->
+    <section id="personalizacion" class="pc-section" data-section>
+      <div class="pc-narrow">
+        <h2 class="pc-h2 reveal" data-i18n="pa.h.personalizacion">La apuesta: personalización</h2>
+        <p class="pc-text pc-strong reveal" data-i18n="pa.pers">Convertimos Settings en el centro del producto. Desde ahí, cada equipo adapta Piper sin depender de nosotros.</p>
+        <h3 class="pc-h3 reveal" data-i18n="pa.h.mt">Meeting types</h3>
+        <p class="pc-text reveal" data-i18n="pa.mt">Cada equipo crea sus propios tipos de reunión (demo, discovery, renovación…). Cada tipo define qué se prepara antes, qué se analiza y qué pasa después.</p>
+        <h3 class="pc-h3 reveal" data-i18n="pa.h.bot">Un bot con tu voz</h3>
+        <p class="pc-text reveal" data-i18n="pa.bot">El usuario elige el nombre del bot y el mensaje con el que se presenta al entrar en la llamada. Un detalle pequeño, pero decisivo: es lo primero que ve su cliente.</p>
+        <h3 class="pc-h3 reveal" data-i18n="pa.h.datos">Los datos que importan a cada equipo</h3>
+        <p class="pc-text reveal" data-i18n="pa.datos">El equipo decide qué información se extrae de cada conversación (presupuesto, próximos pasos, objeciones, competidores…). Esa información aparece en la transcripción y se sincroniza con su CRM.</p>
+      </div>
+      <figure class="pc-wide reveal"><img class="pc-shot" src="images/piper-aircall/transcripcion.webp" width="2400" height="1467" loading="lazy" alt=""><figcaption class="pc-cap" data-i18n="pa.cap.trans">La transcripción, con los campos de CRM sugeridos según la configuración del equipo.</figcaption></figure>
+      <div class="pc-narrow">
+        <h3 class="pc-h3 reveal" data-i18n="pa.h.agentes">Agentes antes, durante y después de cada llamada</h3>
+        <ul class="pc-bullets reveal"><li><span data-i18n="pa.ag1"><b>Antes:</b> meeting prep con el contexto del cliente y de la oportunidad.</span></li><li><span data-i18n="pa.ag2"><b>Durante:</b> notificaciones cuando algo requiere atención.</span></li><li><span data-i18n="pa.ag3"><b>Después:</b> emails de seguimiento y actualización del CRM.</span></li></ul>
+        <p class="pc-text reveal" data-i18n="pa.ag4">Y, además, un agente al que preguntar cualquier cosa sobre tus deals, con respuestas basadas en todas tus conversaciones.</p>
+      </div>
+      <figure class="pc-wide reveal"><video class="pc-shot" src="images/piper-aircall/agente.mp4" style="aspect-ratio:16 / 9" muted loop autoplay playsinline preload="metadata"></video></figure>
+      <figure class="pc-wide reveal"><img class="pc-shot" src="images/piper-aircall/settings-email.webp" width="2400" height="1467" loading="lazy" alt=""><figcaption class="pc-cap" data-i18n="pa.cap.email">Settings · plantillas de email: cada equipo define el tono y la estructura de sus follow-ups.</figcaption></figure>
+    </section>
+
+    <!-- ===================== APP DE ESCRITORIO ===================== -->
+    <section id="escritorio" class="pc-section" data-section>
+      <div class="pc-narrow">
+        <h2 class="pc-h2 reveal" data-i18n="pa.h.escritorio">Piper, en tu escritorio</h2>
+        <p class="pc-text reveal" data-i18n="pa.esc1">No todas las conversaciones pasan por una videollamada en la que puede entrar un bot. Muchas suceden en Slack, Teams o Google Meet, a veces sin planificar. Para que ninguna se quedara fuera, creamos la app de escritorio de Piper.</p>
+        <ol class="pc-steps reveal"><li><span data-i18n="pa.esc.s1"><b>Detecta la conversación:</b> cuando empiezas a hablar en Slack, Teams, Google Meet u otra herramienta, aparece una notificación en tu ordenador.</span></li><li><span data-i18n="pa.esc.s2"><b>Graba con un clic:</b> desde esa notificación, la app graba la pantalla de tu ordenador gracias a un SDK de grabación, sin que entre ningún bot en la llamada.</span></li><li><span data-i18n="pa.esc.s3"><b>Piper hace el resto:</b> la grabación se envía a Piper, se transcribe y aparece en la home como una actividad más, con los datos extraídos, el CRM actualizado y los agentes en marcha.</span></li></ol>
+        <p class="pc-text pc-strong reveal" data-i18n="pa.esc2">El resultado: el comercial no tiene que acordarse de nada. Cualquier conversación de venta, venga de donde venga, acaba en Piper.</p>
+      </div>
+      <figure class="pc-wide reveal"><video class="pc-shot" src="images/piper-aircall/app-escritorio.mp4" style="aspect-ratio:16 / 9" muted loop autoplay playsinline preload="metadata"></video></figure>
+      <figure class="pc-wide reveal"><img class="pc-shot" src="images/piper-aircall/desktop-app.webp" width="2400" height="1500" loading="lazy" alt=""></figure>
+    </section>
+
+    <!-- ===================== PLATAFORMA ===================== -->
+    <section id="plataforma" class="pc-section" data-section>
+      <div class="pc-narrow">
+        <h2 class="pc-h2 reveal" data-i18n="pa.h.plataforma">La plataforma hoy</h2>
+        <p class="pc-text reveal" data-i18n="pa.plat">Del calendario a la transcripción, las tareas y los deals: todo conectado y generado a partir de las conversaciones.</p>
+      </div>
+      <figure class="pc-wide reveal"><img class="pc-shot" src="images/piper-aircall/home.webp" width="2400" height="1467" loading="lazy" alt=""><figcaption class="pc-cap" data-i18n="pa.cap.home">Events: la preparación de cada reunión, lista antes de entrar.</figcaption></figure>
+      <figure class="pc-wide reveal"><img class="pc-shot" src="images/piper-aircall/recordings.webp" width="2400" height="1467" loading="lazy" alt=""><figcaption class="pc-cap" data-i18n="pa.cap.rec">Recordings: todas las conversaciones con su puntuación y su resumen.</figcaption></figure>
+      <figure class="pc-wide reveal"><img class="pc-shot" src="images/piper-aircall/tasks.webp" width="2400" height="1467" loading="lazy" alt=""><figcaption class="pc-cap" data-i18n="pa.cap.tasks">Tasks: los compromisos detectados en las llamadas se convierten en tareas.</figcaption></figure>
+      <figure class="pc-wide reveal"><img class="pc-shot" src="images/piper-aircall/deals.webp" width="2400" height="1467" loading="lazy" alt=""><figcaption class="pc-cap" data-i18n="pa.cap.deals">Deals: métricas de cada oportunidad, actualizadas con cada conversación.</figcaption></figure>
+      <figure class="pc-wide reveal"><img class="pc-shot" src="images/piper-aircall/settings-seats.webp" width="2400" height="1467" loading="lazy" alt=""><figcaption class="pc-cap" data-i18n="pa.cap.seats">Settings · Seats: quién tiene acceso a Piper y cómo.</figcaption></figure>
+    </section>
+
+    <!-- ===================== PROCESO ===================== -->
+    <section id="proceso" class="pc-section pc-narrow" data-section>
+      <h2 class="pc-h2 reveal" data-i18n="pa.h.proceso">Cómo lo diseñamos</h2>
+      <p class="pc-text reveal" data-i18n="pa.proc">Diseñar algo tan configurable tenía un riesgo: que se volviera complicado. Trabajamos con tres principios:</p>
+      <ol class="pc-steps reveal"><li><span data-i18n="pa.p1"><b>Funciona bien desde el primer día:</b> valores por defecto útiles, sin obligar a configurar nada.</span></li><li><span data-i18n="pa.p2"><b>Configurar se parece a usar:</b> lo que el usuario ajusta en Settings lo ve reflejado en la transcripción y en sus reuniones.</span></li><li><span data-i18n="pa.p3"><b>Iterar con clientes reales:</b> cada funcionalidad se validó y se ajustó con el feedback de los equipos que usaban Piper a diario.</span></li></ol>
+    </section>
+
+    <!-- ===================== RESULTADO ===================== -->
+    <section id="resultado" class="pc-section pc-narrow pc-last" data-section>
+      <h2 class="pc-h2 reveal" data-i18n="pa.h.resultado">Resultado</h2>
+      <ul class="pc-bullets reveal"><li><span data-i18n="pa.res1">De un MVP a una plataforma de revenue intelligence con agentes de IA.</span></li><li><span data-i18n="pa.res2">Adquisición por Aircall en 2026, una empresa con más de 23.000 clientes en más de 100 países. El equipo de Piper se integra en Aircall.</span></li></ul>
+      <h3 class="pc-h3 reveal" data-i18n="pa.h.aprendi">Lo que aprendí</h3>
+      <blockquote class="pc-quote reveal"><p data-i18n="pa.aprendi">Diseñar para la personalización me enseñó que no se trata de añadir opciones, sino de entender por qué cada equipo trabaja como trabaja y darle el control justo para que el producto se adapte a él, y no al revés.</p></blockquote>
+      <a class="back-link" href="index.html#use-cases" data-i18n="pa.volver">← Volver a Casos de uso</a>
+    </section>
+
+  </main>
+
+  <script src="textos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
