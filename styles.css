@@ -226,6 +226,11 @@ button { font: inherit; color: inherit; background: none; border: 0; }
 .cover__hover { opacity: 0; transition: opacity .45s ease; background: var(--bg); object-fit: contain !important; }
 .card:hover .cover__hover.is-playing { opacity: 1; }
 
+/* Kidovo: logo centrado sobre el lila del proyecto */
+.cover--kidovo { background: #8D7885; }
+.cover--kidovo .cover__logo { position: static; width: 40%; height: auto; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.card:hover .cover--kidovo .cover__logo { transform: scale(1.04); }
+
 /* The Garden People: foto de plantas + logo blanco */
 .cover--plants { --bg: #4E5A48; }
 .cover--plants .cover__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 40% 45%; }
@@ -771,6 +776,12 @@ figure.pc-wide { margin-top: 40px; }
   animation: brillo 1.2s linear infinite;
 }
 @keyframes brillo { to { background-position: -200% 0; } }
+
+/* Menú del email */
+.mail-menu { position: absolute; left: 0; top: calc(100% + 10px); z-index: 40; min-width: 220px; display: grid; padding: 6px; background: var(--panel); border-radius: 14px; box-shadow: 0 16px 40px -12px rgba(27, 52, 47, .3), 0 0 0 1px var(--linea); animation: mailIn .18s ease; }
+.mail-menu a, .mail-menu button { text-align: left; padding: 9px 12px; border-radius: 9px; font: inherit; font-size: 15px; color: var(--texto); background: none; border: 0; cursor: pointer; }
+.mail-menu a:hover, .mail-menu button:hover { background: var(--panel-hover); color: var(--hover); }
+@keyframes mailIn { from { opacity: 0; transform: translateY(-4px); } }
 
 /* ===== Cursor personalizado ===== */
 .cursor {

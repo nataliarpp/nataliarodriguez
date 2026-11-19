@@ -33,8 +33,6 @@ const TEXTOS = {
     "p3.tipo": "Research, disseny, prova A/B i prova d'adquisició d'usuaris",
     "p4.titulo": "The Garden People i Kerama",
     "p4.tipo": "Experiència d'usuari i redisseny web",
-    "p5.titulo": "Packaging i Il·lustració",
-    "p5.tipo": "Disseny gràfic i il·lustració",
 
     "bio.1": "Tots ens hem frustrat amb un botó que no funciona o hem abandonat una app perquè no enteníem com fer-la servir. Per això vaig fer el pas del disseny gràfic al disseny de producte: dissenyar bonic crida l'atenció, però dissenyar amb fonament és el que fa que una cosa funcioni.",
     "bio.2": "Avui faig servir la IA per accelerar el procés de principi a fi: des de la recerca i la definició fins al prototipatge i la validació de cada part del producte.",
@@ -391,6 +389,15 @@ const TEXTOS = {
     "bs.invernaderos.t": "Manuals d'instruccions de productes de jardineria per a The Garden People.",
     "bs.riego": "Programadors de reg",
     "bs.riego.t": "Manuals d'instruccions de productes de jardineria per a The Garden People.",
+    "pk.pagina": "Packaging — Natalia Rodríguez",
+    "il.pagina": "Il·lustració — Natalia Rodríguez",
+    "bs.n.proyectos": "Projectes",
+    "bs.manuales": "Manuals d'instruccions",
+    "bs.manuales.t": "Manuals d'instruccions de productes de jardineria per a The Garden People: hivernacles i programadors de reg.",
+    "p5.titulo": "Packaging",
+    "p5.tipo": "Disseny gràfic i packaging",
+    "p6.titulo": "Il·lustració",
+    "p6.tipo": "Calendaris, manuals i Instagram",
     "bs.volver": "← Tornar a Casos d'ús",
 
 
@@ -516,8 +523,6 @@ const TEXTOS = {
     "p3.tipo": "Research, design, A/B testing and user acquisition testing",
     "p4.titulo": "The Garden People & Kerama",
     "p4.tipo": "User experience and website redesign",
-    "p5.titulo": "Packaging & Illustration",
-    "p5.tipo": "Graphic design & illustration",
 
     "bio.1": "We've all been frustrated by a button that doesn't work, or given up on an app because we couldn't figure out how to use it. That's why I moved from graphic design to product design: pretty design gets attention, but well-grounded design is what makes things work.",
     "bio.2": "Today I use AI to speed up the process end to end, from research and definition to prototyping and validating every part of the product.",
@@ -874,6 +879,15 @@ const TEXTOS = {
     "bs.invernaderos.t": "Instruction manuals for gardening products for The Garden People.",
     "bs.riego": "Irrigation timers",
     "bs.riego.t": "Instruction manuals for gardening products for The Garden People.",
+    "pk.pagina": "Packaging — Natalia Rodríguez",
+    "il.pagina": "Illustration — Natalia Rodríguez",
+    "bs.n.proyectos": "Projects",
+    "bs.manuales": "Instruction manuals",
+    "bs.manuales.t": "Instruction manuals for gardening products for The Garden People: greenhouses and irrigation timers.",
+    "p5.titulo": "Packaging",
+    "p5.tipo": "Graphic design & packaging",
+    "p6.titulo": "Illustration",
+    "p6.tipo": "Calendars, manuals & Instagram",
     "bs.volver": "← Back to Use cases",
 
 

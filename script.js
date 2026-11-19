@@ -386,3 +386,41 @@ if (cursor && hasMouse) {
     requestAnimationFrame(follow);
   })();
 }
+
+// =========================================================
+// Email: al pulsarlo, menú para abrirlo en Gmail, Outlook, la app de correo o copiarlo
+// =========================================================
+(function () {
+  const L = {
+    es: { gmail: "Abrir en Gmail", outlook: "Abrir en Outlook", app: "App de correo", copy: "Copiar email", copied: "¡Copiado!" },
+    ca: { gmail: "Obrir a Gmail", outlook: "Obrir a Outlook", app: "App de correu", copy: "Copiar correu", copied: "Copiat!" },
+    en: { gmail: "Open in Gmail", outlook: "Open in Outlook", app: "Mail app", copy: "Copy email", copied: "Copied!" },
+  };
+  let menu = null;
+  const close = () => { if (menu) { menu.remove(); menu = null; } };
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-mail]");
+    if (!a) { if (menu && !menu.contains(e.target)) close(); return; }
+    e.preventDefault();
+    if (menu) { close(); return; }
+    const mail = a.dataset.mail, t = L[document.documentElement.lang] || L.es;
+    const enc = encodeURIComponent(mail);
+    menu = document.createElement("div");
+    menu.className = "mail-menu";
+    menu.innerHTML = `
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=${enc}" target="_blank" rel="noopener">${t.gmail} ↗</a>
+      <a href="https://outlook.live.com/mail/0/deeplink/compose?to=${enc}" target="_blank" rel="noopener">${t.outlook} ↗</a>
+      <a href="mailto:${mail}">${t.app}</a>
+      <button type="button">${t.copy}</button>`;
+    menu.querySelector("button").addEventListener("click", (ev) => {
+      const b = ev.currentTarget;
+      (navigator.clipboard ? navigator.clipboard.writeText(mail) : Promise.reject()).then(
+        () => { b.textContent = t.copied; setTimeout(close, 900); },
+        () => { b.textContent = mail; });
+    });
+    menu.querySelectorAll("a").forEach((x) => x.addEventListener("click", () => setTimeout(close, 50)));
+    a.parentElement.style.position = "relative";
+    a.insertAdjacentElement("afterend", menu);
+  });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+})();
